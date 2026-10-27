@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đà Nẵng Tôi Yêu — Xưa & Nay | Tạp Chí Du Lịch, Ẩm Thực & Cung Đường Biển</title>
+  <meta name="description" content="Ấn phẩm tạp chí số về thành phố Đà Nẵng: Đối chiếu ký ức Tourane xưa và nay, danh mục điểm đến, cung đường chạy bộ biển bình minh và bí quyết chế biến đặc sản chuẩn đầu bếp." />
+  <meta name="keywords" content="Đà Nẵng xưa và nay, du lịch Đà Nẵng, chạy bộ biển Đà Nẵng, đặc sản Đà Nẵng, mì Quảng, gỏi cá Nam Ô, biển Mỹ Khê, bán đảo Sơn Trà" />
+  <meta name="author" content="Đà Nẵng Tôi Yêu" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Đà Nẵng Tôi Yêu — Xưa & Nay | Luxury Travel & Culinary Magazine" />
+  <meta property="og:description" content="Hành trình khám phá ký ức Đà Nẵng xưa và nay, những cung đường chạy bộ đón bình minh tuyệt đẹp và bí quyết nấu đặc sản từ bếp trưởng." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts hỗ trợ đầy đủ tiếng Việt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- THANH ĐIỀU HƯỚNG TẠP CHÍ (STICKY HEADER) -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo" aria-label="Trang chủ Đà Nẵng Tôi Yêu">
+        <span class="brand-badge">ẤN PHẨM DI SẢN</span>
+        <span class="brand-title" id="navBrandTitle">ĐÀ NẴNG TÔI YÊU</span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở menu điều hướng" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li><a href="#xua-va-nay" class="nav-link">Xưa &amp; Nay</a></li>
+          <li><a href="#diem-den" class="nav-link">Điểm Đến</a></li>
+          <li><a href="#chay-bo" class="nav-link nav-highlight">Cung Đường Chạy Bộ</a></li>
+          <li><a href="#am-thuc" class="nav-link">Bếp Trưởng</a></li>
+          <li><a href="#album-anh" class="nav-link">Album Ảnh</a></li>
+          <li><a href="#nguon-tu-lieu" class="nav-link">Nguồn Tư Liệu</a></li>
+        </ul>
+        <button class="saved-Btn" id="openSavedDrawerBtn" type="button" aria-label="Mở sổ tay đã lưu">
+          <span>Sổ Tay</span>
+          <span class="saved-count" id="savedCountBadge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. MÀN HÌNH ĐẦU TIÊN (HERO SECTION) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop" id="heroBackdrop"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-top-bar">
+          <span class="editorial-tag">LUXURY TRAVEL • HERITAGE • CULINARY • RUNNING</span>
+          <div class="era-switcher" role="group" aria-label="Chuyển chế độ cảm hứng">
+            <button type="button" class="era-btn active" data-mode="now" id="heroModeNow">Đà Nẵng Nay</button>
+            <button type="button" class="era-btn" data-mode="then" id="heroModeThen">Hoài Niệm Tourane Xưa</button>
+          </div>
+        </div>
+
+        <h1 class="hero-title" id="heroTitle">
+          Đà Nẵng Tôi Yêu: Giao Hòa Ký Ức, Sắc Biển &amp; Nhịp Sống Mới
+        </h1>
+        <p class="hero-subtitle" id="heroSubtitle">
+          Từ bến cảng Tourane xưa đến thành phố đáng sống bên bờ biển Đông — nơi mỗi sớm mai đón bình minh trên cung đường ven biển, ngắm những nhịp cầu vươn mình và thưởng thức mỹ vị đậm tình xứ Quảng.
+        </p>
+
+        <!-- Thanh tìm kiếm nhanh toàn trang -->
+        <div class="hero-search-box">
+          <input
+            type="search"
+            id="globalHeroSearch"
+            placeholder="Tìm nhanh: Ngũ Hành Sơn, Mì Quảng, Cung đường biển Mỹ Khê, Cầu Rồng..."
+            aria-label="Tìm kiếm nhanh địa điểm, cung đường chạy bộ hoặc món ăn"
+          />
+          <button type="button" id="heroSearchBtn" class="btn btn-primary">Khám Phá Ngay</button>
+        </div>
+
+        <!-- Lối tắt hành động chính -->
+        <div class="hero-cta-group">
+          <a href="#diem-den" class="btn btn-light">Khám Phá Điểm Đến</a>
+          <a href="#chay-bo" class="btn btn-gold">Cung Đường Chạy Bộ Biển</a>
+          <a href="#am-thuc" class="btn btn-terracotta">Bí Quyết Đầu Bếp</a>
+          <a href="#xua-va-nay" class="btn btn-outline-light">Đối Chiếu Xưa &amp; Nay</a>
+        </div>
+
+        <!-- Chỉ số nhanh tạp chí -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>100+ Năm</strong>
+            <span>Tư liệu ký ức đô thị</span>
+          </div>
+          <div class="stat-item">
+            <strong>8 Danh Thắng</strong>
+            <span>Chọn lọc có nguồn dẫn</span>
+          </div>
+          <div class="stat-item">
+            <strong>5 Cung Đường</strong>
+            <span>Chạy bộ đón bình minh</span>
+          </div>
+          <div class="stat-item">
+            <strong>6 Bí Quyết</strong>
+            <span>Công thức chuẩn Bếp Trưởng</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CHUYÊN MỤC: ĐÀ NẴNG XƯA & NAY -->
+    <section class="section section-heritage" id="xua-va-nay">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">CHUYÊN ĐỀ KÝ ỨC ĐÔ THỊ</span>
+          <h2 class="section-title">Đà Nẵng Xưa &amp; Nay — Dòng Chảy Bên Bờ Sông Hàn</h2>
+          <p class="section-desc">
+            Kéo thanh trượt sang trái hoặc phải để cảm nhận sự chuyển mình kỳ diệu từ một thương cảng Tourane trầm mặc xưa kia đến diện mạo đô thị biển hiện đại hôm nay.
+          </p>
+        </div>
+
+        <!-- Nút chọn cặp địa danh Xưa & Nay -->
+        <div class="heritage-tabs" id="heritageTabs" role="tablist" aria-label="Chọn địa danh so sánh Xưa và Nay"></div>
+
+        <!-- Khung kéo Before / After -->
+        <div class="comparison-wrapper">
+          <div class="comparison-stage" id="comparisonStage">
+            <img id="compAfterImg" src="" alt="Đà Nẵng ngày nay" class="comp-img comp-after" />
+            <div class="comp-before-clip" id="compBeforeClip">
+              <img id="compBeforeImg" src="" alt="Đà Nẵng xưa" class="comp-img comp-before" />
+            </div>
+            <span class="comp-label comp-label-before" id="compBeforeLabel">XƯA</span>
+            <span class="comp-label comp-label-after" id="compAfterLabel">NAY</span>
+            <div class="comp-handle" id="compHandle" aria-hidden="true">
+              <div class="comp-handle-line"></div>
+              <div class="comp-handle-circle">&#8596;</div>
+              <div class="comp-handle-line"></div>
+            </div>
+            <input
+              type="range"
+              min="5"
+              max="95"
+              value="50"
+              id="compSliderInput"
+              class="comp-range-input"
+              aria-label="Thanh kéo so sánh hình ảnh Đà Nẵng Xưa và Nay"
+            />
+          </div>
+
+          <div class="comparison-story" id="comparisonStory">
+            <!-- Nội dung câu chuyện Xưa & Nay được render từ JS -->
+          </div>
+        </div>
+
+        <!-- Dòng thời gian lịch sử -->
+        <div class="timeline-box">
+          <h3 class="subsection-title">Những Cột Mốc Lịch Sử &amp; Chuyển Mình Đô Thị</h3>
+          <div class="timeline-grid" id="heritageTimeline"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CHUYÊN MỤC: ĐỊA ĐIỂM DU LỊCH & BỘ LỌC -->
+    <section class="section section-destinations" id="diem-den">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">CẨM NANG HÀNH TRÌNH</span>
+          <h2 class="section-title">Danh Mục Điểm Đến Hấp Dẫn Tại Đà Nẵng</h2>
+          <p class="section-desc">
+            Tra cứu theo danh mục, quận/khu vực và khung giờ đẹp nhất trong ngày. Mọi địa danh đều tích hợp bản đồ thực tế và nguồn dẫn chính thống.
+          </p>
+        </div>
+
+        <!-- Bộ lọc đa chiều -->
+        <div class="filter-panel">
+          <div class="filter-row">
+            <div class="filter-group filter-search">
+              <label for="destSearchInput">Từ khóa tìm kiếm</label>
+              <input
+                type="search"
+                id="destSearchInput"
+                placeholder="Nhập tên địa điểm (hỗ trợ gõ không dấu: ngu hanh son, son tra...)"
+              />
+            </div>
+
+            <div class="filter-group">
+              <label for="destAreaSelect">Khu vực</label>
+              <select id="destAreaSelect">
+                <option value="all">Tất cả khu vực</option>
+                <option value="Sơn Trà">Bán đảo Sơn Trà</option>
+                <option value="Ngũ Hành Sơn">Quận Ngũ Hành Sơn</option>
+                <option value="Hải Châu">Quận Hải Châu</option>
+                <option value="Hòa Vang & Liên Chiểu">Hòa Vang &amp; Liên Chiểu</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="destTimeSelect">Thời điểm đẹp nhất</label>
+              <select id="destTimeSelect">
+                <option value="all">Mọi thời điểm</option>
+                <option value="Bình minh">Đón bình minh</option>
+                <option value="Ban ngày">Ban ngày</option>
+                <option value="Hoàng hôn">Ngắm hoàng hôn</option>
+                <option value="Về đêm">Rực rỡ về đêm</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-pills-row">
+            <div class="category-pills" id="destCategoryPills" role="group" aria-label="Lọc theo loại hình điểm đến">
+              <button type="button" class="pill-btn active" data-cat="all">Tất cả</button>
+              <button type="button" class="pill-btn" data-cat="Biển & Bán đảo">Biển &amp; Bán đảo</button>
+              <button type="button" class="pill-btn" data-cat="Núi & Tâm linh">Núi &amp; Tâm linh</button>
+              <button type="button" class="pill-btn" data-cat="Cầu & Kiến trúc">Cầu &amp; Kiến trúc</button>
+              <button type="button" class="pill-btn" data-cat="Văn hóa & Bảo tàng">Văn hóa &amp; Bảo tàng</button>
+            </div>
+            <div class="filter-status">
+              <span id="destResultCount">Đang hiển thị 8 địa điểm</span>
+              <button type="button" class="btn-text-reset" id="resetDestFilterBtn">Xóa bộ lọc</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lưới thẻ địa điểm -->
+        <div class="cards-grid" id="destinationsGrid"></div>
+      </div>
+    </section>
+
+    <!-- 4. CHUYÊN MỤC ĐẶC BIỆT: CUNG ĐƯỜNG CHẠY BỘ BIỂN & CÔNG VIÊN ĐÀ NẴNG -->
+    <section class="section section-running" id="chay-bo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">NĂNG LƯỢNG NGÀY MỚI • WELLNESS &amp; RUNNING</span>
+          <h2 class="section-title">Cung Đường Chạy Bộ Biển &amp; Công Viên Đà Nẵng Tuyệt Đẹp</h2>
+          <p class="section-desc">
+            Dành cho những bước chân yêu bình minh phố biển: nơi tiếng sóng vỗ bờ Mỹ Khê, gió mát dọc đôi bờ sông Hàn và sắc xanh bán đảo Sơn Trà tiếp thêm nguồn năng lượng tích cực mỗi ngày.
+          </p>
+        </div>
+
+        <!-- Công cụ tính Pace & Thời gian hoàn thành cung đường -->
+        <div class="runner-calculator-card">
+          <div class="runner-calc-header">
+            <div>
+              <span class="badge-gold">CÔNG CỤ CHẠY BỘ SÁNG SỚM</span>
+              <h3>Ước Tính Pace &amp; Khung Giờ Đón Bình Minh Đà Nẵng</h3>
+            </div>
+            <p>Chọn cung đường hoặc cự ly và Pace mục tiêu để lên kế hoạch xuất phát chuẩn xác trước giờ mặt trời mọc.</p>
+          </div>
+
+          <div class="runner-calc-controls">
+            <div class="calc-field">
+              <label for="runDistanceSelect">Chọn cự ly mục tiêu</label>
+              <select id="runDistanceSelect">
+                <option value="3">3 km — Chạy thư giãn (Recovery Run)</option>
+                <option value="5" selected>5 km — Năng lượng buổi sáng</option>
+                <option value="10">10 km — Chạy bền ven biển</option>
+                <option value="15">15 km — Chinh phục cung vịnh biển</option>
+                <option value="21.1">21.1 km — Half Marathon Sơn Trà / Biển</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="runPaceSelect">Pace trung bình (phút/km)</label>
+              <select id="runPaceSelect">
+                <option value="5.0">5:00 /km (Chạy tốc độ tốt)</option>
+                <option value="5.5">5:30 /km (Chạy nhịp độ ổn định)</option>
+                <option value="6.0" selected>6:00 /km (Chạy bền thoải mái)</option>
+                <option value="6.5">6:30 /km (Chạy thong thả ngắm cảnh)</option>
+                <option value="7.0">7:00 /km (Jogging nhẹ nhàng)</option>
+                <option value="8.0">8:00 /km (Đi bộ nhanh kết hợp chạy)</option>
+              </select>
+            </div>
+
+            <div class="calc-result-box" id="runnerCalcResult">
+              <!-- Kết quả tự động tính từ JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Bộ lọc cung đường chạy bộ -->
+        <div class="category-pills running-pills" id="runningCategoryPills" role="group" aria-label="Lọc cung đường chạy bộ">
+          <button type="button" class="pill-btn active" data-runcat="all">Tất cả cung đường</button>
+          <button type="button" class="pill-btn" data-runcat="Ven biển Bình minh">Ven biển Bình minh</button>
+          <button type="button" class="pill-btn" data-runcat="Đôi bờ Sông Hàn">Đôi bờ Sông Hàn</button>
+          <button type="button" class="pill-btn" data-runcat="Bán đảo & Leo dốc">Bán đảo &amp; Leo dốc</button>
+          <button type="button" class="pill-btn" data-runcat="Công viên Xanh">Công viên Xanh</button>
+        </div>
+
+        <!-- Lưới thẻ các cung đường chạy bộ -->
+        <div class="running-grid" id="runningRoutesGrid"></div>
+      </div>
+    </section>
+
+    <!-- 5. CHUYÊN MỤC: ĐẶC SẢN & BÍ QUYẾT ĐẦU BẾP TÀI BA -->
+    <section class="section section-culinary" id="am-thuc">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">MASTER CHEF'S KITCHEN • MỸ VỊ XỨ QUẢNG</span>
+          <h2 class="section-title">Đặc Sản Đà Nẵng &amp; Bí Quyết Chế Biến Chuẩn Đầu Bếp</h2>
+          <p class="section-desc">
+            Khám phá linh hồn ẩm thực Đà thành qua góc nhìn kỹ thuật bếp chuyên nghiệp: từ cách chọn nguyên liệu tươi buổi sớm, bí quyết ninh nước dùng thanh ngọt đến tỷ lệ pha nước chấm chuẩn vị.
+          </p>
+        </div>
+
+        <!-- Bộ lọc món ăn -->
+        <div class="category-pills" id="culinaryCategoryPills" role="group" aria-label="Lọc danh mục món ăn">
+          <button type="button" class="pill-btn active" data-foodcat="all">Tất cả tuyệt phẩm</button>
+          <button type="button" class="pill-btn" data-foodcat="Món Nước Tinh Túy">Món Nước Tinh Túy</button>
+          <button type="button" class="pill-btn" data-foodcat="Món Cuốn & Gỏi Biển">Món Cuốn &amp; Gỏi Biển</button>
+          <button type="button" class="pill-btn" data-foodcat="Món Nóng Truyền Thống">Món Nóng Truyền Thống</button>
+        </div>
+
+        <!-- Lưới món ăn -->
+        <div class="culinary-grid" id="culinaryGrid"></div>
+      </div>
+    </section>
+
+    <!-- 6. CHUYÊN MỤC: ALBUM ẢNH PHONG CẢNH & KÝ ỨC -->
+    <section class="section section-gallery" id="album-anh">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">VISUAL ARCHIVE • KHOẢNH KHẮC ĐÀ THÀNH</span>
+          <h2 class="section-title">Album Ảnh Phong Cảnh, Nhịp Sống &amp; Ký Ức</h2>
+          <p class="section-desc">
+            Chạm vào từng bức ảnh để xem ở chế độ toàn màn hình (Lightbox), kèm thông tin góc chụp, thời điểm săn ảnh đẹp và chú thích nguồn.
+          </p>
+        </div>
+
+        <div class="category-pills" id="galleryCategoryPills" role="group" aria-label="Lọc chủ đề album ảnh">
+          <button type="button" class="pill-btn active" data-galcat="all">Tất cả ảnh</button>
+          <button type="button" class="pill-btn" data-galcat="Bình minh & Chạy bộ">Bình minh &amp; Chạy bộ</button>
+          <button type="button" class="pill-btn" data-galcat="Nhịp cầu & Sông Hàn">Nhịp cầu &amp; Sông Hàn</button>
+          <button type="button" class="pill-btn" data-galcat="Thiên nhiên & Di sản">Thiên nhiên &amp; Di sản</button>
+          <button type="button" class="pill-btn" data-galcat="Đà Nẵng Xưa">Đà Nẵng Xưa</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- 7. CHUYÊN MỤC: NGUỒN TƯ LIỆU THỰC TẾ, TÁC GIẢ & ĐÓNG GÓP -->
+    <section class="section section-sources" id="nguon-tu-lieu">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">MINH BẠCH THÔNG TIN &amp; BẢN QUYỀN</span>
+          <h2 class="section-title">Nguồn Tư Liệu Thực Tế &amp; Lời Ngỏ Tác Giả</h2>
+          <p class="section-desc">
+            Mọi thông tin lịch sử, địa danh và di sản ẩm thực trên trang đều được biên tập dựa trên nguồn công khai chính thống, phân tách rõ ràng giữa dữ kiện thực tế và gợi ý trải nghiệm.
+          </p>
+        </div>
+
+        <div class="sources-layout">
+          <!-- Danh sách nguồn chính thống -->
+          <div class="sources-card">
+            <h3>Danh Mục Nguồn Đối Chiếu Chính Thống</h3>
+            <ul class="sources-list" id="sourcesList"></ul>
+            <div class="tech-transparency-note">
+              <h4>Ghi chú vận hành trên GitHub Pages:</h4>
+              <p>
+                Website hoạt động 100% ở chế độ tĩnh tốc độ cao. Các tính năng <strong>Bộ lọc thông minh, Thanh kéo Xưa &amp; Nay, Máy tính khẩu phần Đầu bếp, Máy tính Pace chạy bộ, In PDF và Lưu sổ tay yêu thích (LocalStorage)</strong> hoạt động trực tiếp trên trình duyệt của người xem mà không thu thập dữ liệu cá nhân.
+              </p>
+            </div>
+          </div>
+
+          <!-- Thẻ lời ngỏ tác giả & gửi đóng góp tư liệu -->
+          <div class="author-card" id="authorCardBox">
+            <!-- Được tạo động từ cấu hình trong js/data.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CHÂN TRANG (FOOTER) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-badge">LUXURY DIGITAL MAGAZINE</span>
+        <h3 id="footerBrandTitle">ĐÀ NẴNG TÔI YÊU — XƯA &amp; NAY</h3>
+        <p id="footerTagline">
+          Ấn phẩm lưu giữ ký ức đô thị, tôn vinh cảnh sắc thiên nhiên, những cung đường chạy bộ bình minh và tinh hoa ẩm thực Đà thành.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>Chuyên Mục</h4>
+        <ul>
+          <li><a href="#xua-va-nay">Đà Nẵng Xưa &amp; Nay</a></li>
+          <li><a href="#diem-den">Danh Mục Điểm Đến</a></li>
+          <li><a href="#chay-bo">Cung Đường Chạy Bộ Biển</a></li>
+          <li><a href="#am-thuc">Bếp Trưởng Đà Thành</a></li>
+          <li><a href="#album-anh">Album Ảnh Nghệ Thuật</a></li>
+        </ul>
+      </div>
+      <div class="footer-meta">
+        <h4>Bản Quyền &amp; Xuất Bản</h4>
+        <p>Tối ưu hiển thị trên Điện thoại, Máy tính bảng &amp; Máy tính để bàn.</p>
+        <p>Sẵn sàng triển khai trên <strong>GitHub Pages</strong>.</p>
+        <a href="#top" class="back-to-top">Lên đầu trang &#8593;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL CHI TIẾT (ĐỊA ĐIỂM / CÔNG THỨC ĐẦU BẾP / CUNG ĐƯỜNG CHẠY BỘ) -->
+  <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Đóng cửa sổ chi tiết">&times;</button>
+      <div class="modal-body" id="modalBodyContent"></div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX XEM ẢNH TOÀN MÀN HÌNH -->
+  <div class="lightbox-backdrop" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <button type="button" class="lightbox-close" id="closeLightboxBtn" aria-label="Đóng ảnh phóng to">&times;</button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="prevLightboxBtn" aria-label="Ảnh trước">&#10094;</button>
+    <div class="lightbox-figure-wrap">
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    <button type="button" class="lightbox-nav lightbox-next" id="nextLightboxBtn" aria-label="Ảnh tiếp theo">&#10095;</button>
+  </div>
+
+  <!-- NGĂN KÉO SỔ TAY YÊU THÍCH (SAVED ITEMS DRAWER) -->
+  <div class="drawer-backdrop" id="savedDrawerBackdrop" aria-hidden="true">
+    <aside class="saved-drawer" aria-label="Sổ tay hành trình và công thức đã lưu">
+      <div class="drawer-header">
+        <h3>Sổ Tay Đà Nẵng Của Tôi</h3>
+        <button type="button" class="drawer-close-btn" id="closeSavedDrawerBtn" aria-label="Đóng sổ tay">&times;</button>
+      </div>
+      <div class="drawer-body" id="savedDrawerBody"></div>
+      <div class="drawer-footer">
+        <button type="button" class="btn btn-outline-dark btn-sm" id="exportSavedBtn">Tải File Hành Trình (.json)</button>
+        <button type="button" class="btn btn-terracotta btn-sm" id="clearSavedBtn">Xóa Tất Cả</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Dữ liệu & Ứng dụng JavaScript -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
