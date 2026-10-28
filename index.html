@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đà Nẵng – Thành Phố Tôi Yêu | 13 Danh Thắng, 14 Đặc Sản & Blog Những Điều Ở Lại</title>
+  <meta name="description" content="Khám phá Đà Nẵng xưa và nay, 13 danh thắng nổi tiếng kèm hộp thoại Bản đồ Maps, 14 món đặc sản Đà Nẵng với hình ảnh thực tế chuẩn vị Đầu bếp chuyên nghiệp, con người Đà Nẵng và góc Blog Những điều Ở lại." />
+  <meta property="og:title" content="Đà Nẵng – Thành Phố Tôi Yêu & Blog Những Điều Ở Lại" />
+  <meta property="og:description" content="Nơi sóng biển giao hòa nhịp sống mới – Nơi tình người giữ trọn những điều ở lại. Có những yêu thương, năm tháng chẳng thể mang đi." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Playfair Display, Be Vietnam Pro & Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean: {
+              DEFAULT: '#0A4D68',
+              dark: '#052939',
+              light: '#0E6BA8'
+            },
+            sontra: {
+              DEFAULT: '#088395',
+              light: '#05BFDB'
+            },
+            sunset: {
+              DEFAULT: '#D97706',
+              light: '#F59E0B',
+              soft: '#FEF3C7',
+              deep: '#92400E'
+            },
+            nostalgia: {
+              DEFAULT: '#FAF8F5',
+              warm: '#F4EFE6',
+              sepia: '#785A3C'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+            script: ['"Dancing Script"', 'cursive']
+          },
+          boxShadow: {
+            'magazine': '0 20px 45px -15px rgba(10, 77, 104, 0.16)',
+            'warm': '0 20px 45px -12px rgba(217, 119, 6, 0.25)',
+            'emerald-glow': '0 15px 35px -10px rgba(16, 185, 129, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: #1E293B;
+      background-color: #FAF8F5;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .font-editorial {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* Glassmorphism Navigation */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    /* Subtle Hero Animation */
+    @keyframes subtleZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+    .animate-hero-bg {
+      animation: subtleZoom 26s ease-in-out infinite;
+    }
+
+    /* Before / After Comparison Slider */
+    .comparison-slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .comparison-before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+      z-index: 10;
+    }
+    .sepia-vintage {
+      filter: sepia(0.75) contrast(1.08) brightness(0.93) saturate(0.8);
+    }
+    .slider-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: #FFFFFF;
+      z-index: 20;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.55);
+      pointer-events: none;
+    }
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 9999px;
+      background: #D97706;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      border: 3px solid #FFFFFF;
+    }
+
+    /* =====================================================================
+       CHEF CULINARY HDR & OPTICAL UNSHARP MASK FILTERS
+       (Giữ đúng 100% bố cục món ăn thật của chị Mỹ Trà nhưng làm nét,
+       khử mờ cho ảnh nhỏ và đánh sáng màu nước sốt, rau sống bắt mắt)
+    ====================================================================== */
+    .food-img-frame {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #2d1b0e 0%, #170d06 100%);
+    }
+    /* Lớp viền ánh sáng ấm Studio Đầu Bếp tôn đĩa thức ăn */
+    .food-img-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(255, 248, 231, 0.08) 0%, rgba(15, 23, 42, 0.32) 100%),
+        linear-gradient(to top, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.08) 45%, rgba(0, 0, 0, 0.15) 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Chế độ 1 (Mặc định): Chuẩn Đầu Bếp Rực Rỡ (Chef HDR + Unsharp Mask) */
+    .chef-filter-hdr {
+      filter: url(#chef-hdr-sharpen) contrast(1.09) saturate(1.22) brightness(1.04);
+      image-rendering: -webkit-optimize-contrast;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+    }
+
+    /* Chế độ 2: Siêu Nét Khử Mờ (Dành riêng cho các ảnh có kích thước gốc nhỏ) */
+    .chef-filter-super {
+      filter: url(#chef-super-res) contrast(1.14) saturate(1.28) brightness(1.06);
+      image-rendering: auto;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+    }
+
+    /* Chế độ 3: Ảnh Gốc Nguyên Bản */
+    .chef-filter-original {
+      filter: none;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+    }
+
+    .group:hover .card-zoom-img {
+      transform: scale(1.065);
+    }
+
+    /* Nút Bản đồ Maps hiệu ứng nhịp sáng */
+    @keyframes mapPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45); }
+      50% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+    }
+    .btn-map-glow:hover {
+      animation: mapPulse 1.5s infinite;
+    }
+
+    /* Bảng gỗ "Nhà là nơi có yêu thương" */
+    .wood-plaque {
+      background: linear-gradient(145deg, #b88b61 0%, #966b43 50%, #7d5632 100%);
+      border: 2px solid #5c3d20;
+      box-shadow: inset 0 2px 6px rgba(255,255,255,0.25), 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF8F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0A4D68;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #088395;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-ocean selection:text-white">
+
+  <!-- =====================================================================
+       BỘ LỌC QUANG HỌC SVG DÀNH CHO NHIẾP ẢNH ẨM THỰC ĐẦU BẾP
+       (Khử mờ, làm rõ hạt mè, thớ thịt, sợi mì và làm tươi màu rau sống)
+  ====================================================================== -->
+  <svg class="hidden" width="0" height="0" aria-hidden="true">
+    <defs>
+      <!-- Bộ lọc 1: Chef HDR Sharpen (Cân bằng nét & độ tươi ẩm thực) -->
+      <filter id="chef-hdr-sharpen" color-interpolation-filters="sRGB">
+        <!-- Làm mịn nhiễu hạt JPEG trước khi làm nét -->
+        <feGaussianBlur in="SourceGraphic" stdDeviation="0.35" result="smoothed" />
+        <!-- Ma trận Unsharp Mask làm nổi rõ chi tiết món ăn -->
+        <feConvolveMatrix
+          in="smoothed"
+          order="3 3"
+          preserveAlpha="true"
+          kernelMatrix="0 -0.45 0 -0.45 2.8 -0.45 0 -0.45 0"
+          result="sharpened"
+        />
+        <!-- Cân chỉnh ánh sáng ấm áp kích thích vị giác -->
+        <feComponentTransfer in="sharpened">
+          <feFuncR type="gamma" amplitude="1.03" exponent="0.96" offset="0.01" />
+          <feFuncG type="gamma" amplitude="1.02" exponent="0.97" offset="0.005" />
+          <feFuncB type="gamma" amplitude="0.98" exponent="1.01" offset="0" />
+        </feComponentTransfer>
+      </filter>
+
+      <!-- Bộ lọc 2: Super Resolution Enhancer (Tối ưu cho ảnh kích thước nhỏ) -->
+      <filter id="chef-super-res" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="0.45" result="deblock" />
+        <feConvolveMatrix
+          in="deblock"
+          order="3 3"
+          preserveAlpha="true"
+          kernelMatrix="-0.15 -0.55 -0.15 -0.55 3.8 -0.55 -0.15 -0.55 -0.15"
+          result="crisp"
+        />
+        <feComponentTransfer in="crisp">
+          <feFuncR type="gamma" amplitude="1.05" exponent="0.94" offset="0.01" />
+          <feFuncG type="gamma" amplitude="1.03" exponent="0.96" offset="0.005" />
+          <feFuncB type="gamma" amplitude="0.97" exponent="1.02" offset="0" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- =====================================================================
+       STICKY HEADER NAVIGATION
+  ====================================================================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav border-b border-slate-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none shrink-0">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-ocean to-sontra flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-bridge-water text-lg"></i>
+          </div>
+          <div>
+            <span class="block font-serif font-bold text-lg sm:text-xl text-ocean tracking-tight leading-none whitespace-nowrap">
+              Đà Nẵng <span class="text-sunset">Tôi Yêu</span>
+            </span>
+            <span class="block text-[11px] font-medium text-slate-500 tracking-wider uppercase mt-1 whitespace-nowrap">
+              &amp; Những Điều Ở Lại ♡
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Điều hướng chính">
+          <a href="#hero" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-ocean hover:bg-ocean/5 transition whitespace-nowrap">Trang chủ</a>
+          <a href="#xua-va-nay" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-ocean hover:bg-ocean/5 transition whitespace-nowrap">Xưa &amp; Nay</a>
+          <a href="#danh-thang" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-ocean hover:bg-ocean/5 transition flex items-center gap-1.5 whitespace-nowrap">
+            <span>13 Danh Thắng</span>
+            <span class="px-1.5 py-0.5 text-[10px] font-bold rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300">+Maps</span>
+          </a>
+          <a href="#dac-san" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-ocean hover:bg-ocean/5 transition whitespace-nowrap">
+            14 Đặc Sản
+          </a>
+          <a href="#con-nguoi" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:text-ocean hover:bg-ocean/5 transition whitespace-nowrap">Con người</a>
+          <a href="#nhung-dieu-o-lai" class="ml-1 px-4 py-2.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-sunset to-amber-500 text-white shadow-sm hover:shadow-md hover:brightness-105 transition flex items-center gap-2 whitespace-nowrap">
+            <i class="fa-solid fa-heart text-xs"></i>
+            <span>Blog &amp; Fanpage</span>
+          </a>
+        </nav>
+
+        <!-- Action Buttons: Favorites & Mobile Menu -->
+        <div class="flex items-center gap-2 shrink-0">
+          <button
+            id="open-favorites-btn"
+            type="button"
+            onclick="openFavoritesModal()"
+            class="relative px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-ocean/10 text-slate-700 hover:text-ocean transition flex items-center gap-2 text-sm font-medium"
+            title="Danh sách yêu thích đã lưu"
+          >
+            <i class="fa-solid fa-heart text-rose-500"></i>
+            <span class="hidden sm:inline">Yêu thích</span>
+            <span id="fav-count-badge" class="px-1.5 py-0.5 text-xs font-bold rounded-full bg-ocean text-white">0</span>
+          </button>
+
+          <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:text-ocean hover:bg-slate-200 transition" aria-label="Mở menu">
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="#hero" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-ocean/5 hover:text-ocean">Trang chủ</a>
+      <a href="#xua-va-nay" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-ocean/5 hover:text-ocean">1. Đà Nẵng Xưa &amp; Nay</a>
+      <a href="#danh-thang" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-ocean/5 hover:text-ocean">2. 13 Danh Thắng Đẹp (Kèm Bản Đồ Maps)</a>
+      <a href="#dac-san" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-ocean/5 hover:text-ocean">3. 14 Món Đặc Sản Đà Nẵng</a>
+      <a href="#con-nguoi" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-ocean/5 hover:text-ocean">4. Con Người Đà Nẵng</a>
+      <div class="pt-2 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
+        <a href="#nhung-dieu-o-lai" class="mobile-nav-link flex-1 text-center px-4 py-3 rounded-xl font-semibold bg-gradient-to-r from-sunset to-amber-500 text-white shadow">
+          <i class="fa-solid fa-book-open-reader mr-1.5"></i> Góc Blog "Những Điều Ở Lại"
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61594085625438&sk=about" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-3 rounded-xl font-semibold bg-[#1877F2] text-white shadow">
+          <i class="fa-brands fa-facebook mr-1.5"></i> Vào Fanpage Ngay
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       HERO SECTION (MÀN HÌNH ĐẦU TIÊN ẤN TƯỢNG)
+  ====================================================================== -->
+  <section id="hero" class="relative min-h-[92vh] pt-24 pb-16 flex items-center overflow-hidden bg-ocean-dark">
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img
+        id="hero-bg-img"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Dragon_Bridge_in_Da_Nang_(far).jpg"
+        alt="Toàn cảnh Cầu Rồng và vẻ đẹp thành phố biển Đà Nẵng"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=2000&q=85';"
+        class="w-full h-full object-cover object-center animate-hero-bg opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#042331]/90 via-[#0A4D68]/75 to-[#0A4D68]/45"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#042331] via-transparent to-black/30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-amber-300 text-xs sm:text-sm font-medium mb-6 shadow-lg">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <span>Chào mừng bạn đến với Đà Nẵng – Thành phố đáng sống</span>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.12] tracking-tight drop-shadow-sm">
+          Đà Nẵng – <br class="hidden sm:inline" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-sunset-light">
+            Thành Phố Tôi Yêu
+          </span>
+        </h1>
+
+        <p class="mt-5 text-lg sm:text-xl text-amber-100/95 font-serif italic">
+          “Nơi sóng biển giao hòa nhịp sống mới – Nơi tình người giữ trọn những điều ở lại.”
+        </p>
+
+        <p class="mt-4 text-base sm:text-lg text-slate-200/95 leading-relaxed max-w-2xl font-normal">
+          Hành trình đi qua ký ức xưa và nhịp đập hôm nay, chiêm ngưỡng <strong>13 danh thắng tuyệt đẹp</strong> kèm bản đồ định vị nhanh, thưởng thức <strong>14 món đặc sản trứ danh</strong> đậm đà vị quê nhà và lắng nghe câu chuyện tình người xứ Quảng – Đà ấm áp.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5">
+          <a href="#danh-thang" class="px-6 py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-lg hover:brightness-110 transition flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>13 Danh Thắng &amp; Bản Đồ Maps</span>
+          </a>
+          <a href="#dac-san" class="px-6 py-4 rounded-2xl bg-gradient-to-r from-sunset to-amber-500 text-white font-semibold text-sm sm:text-base shadow-warm hover:brightness-110 transition flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-bowl-food"></i>
+            <span>14 Đặc Sản Chuẩn Vị Đầu Bếp</span>
+          </a>
+          <a href="#nhung-dieu-o-lai" class="px-6 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white backdrop-blur-md border border-white/30 font-semibold text-sm sm:text-base transition flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-heart text-amber-300"></i>
+            <span>Góc Blog "Những Điều Ở Lại"</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Quick Highlights Bar Under Hero -->
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="#xua-va-nay" class="group p-5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-400/20 border border-amber-300/30 flex items-center justify-center text-amber-300 shrink-0 group-hover:scale-110 transition">
+            <i class="fa-solid fa-clock-rotate-left text-xl"></i>
+          </div>
+          <div>
+            <h2 class="text-white font-semibold text-base">Đà Nẵng Xưa &amp; Nay</h2>
+            <p class="text-slate-300 text-xs mt-1 leading-relaxed">Thanh kéo đối chiếu ký ức bến đò sông Hàn xưa và đô thị biển hiện đại.</p>
+          </div>
+        </a>
+
+        <a href="#danh-thang" class="group p-5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-400/20 border border-emerald-300/30 flex items-center justify-center text-emerald-300 shrink-0 group-hover:scale-110 transition">
+            <i class="fa-solid fa-map-marked-alt text-xl"></i>
+          </div>
+          <div>
+            <h2 class="text-white font-semibold text-base">13 Danh Thắng + Maps</h2>
+            <p class="text-slate-300 text-xs mt-1 leading-relaxed">Bà Nà Hills, Cầu Rồng, Mỹ Khê, Đỉnh Bàn Cờ, Mũi Nghê, Hội An, Mỹ Sơn...</p>
+          </div>
+        </a>
+
+        <a href="#dac-san" class="group p-5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-orange-400/20 border border-orange-300/30 flex items-center justify-center text-orange-300 shrink-0 group-hover:scale-110 transition">
+            <i class="fa-solid fa-utensils text-xl"></i>
+          </div>
+          <div>
+            <h2 class="text-white font-semibold text-base">14 Đặc Sản Trứ Danh</h2>
+            <p class="text-slate-300 text-xs mt-1 leading-relaxed">Mì Quảng, Ốc hút, Bánh canh ruộng, Cháo chờ Nam Ô, Bê thui, Chả bò...</p>
+          </div>
+        </a>
+
+        <a href="#nhung-dieu-o-lai" class="group p-5 rounded-2xl bg-gradient-to-br from-amber-500/25 to-sunset/25 hover:from-amber-500/35 hover:to-sunset/35 backdrop-blur-md border border-amber-300/40 transition flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-400 text-ocean-dark flex items-center justify-center shrink-0 group-hover:scale-110 transition shadow">
+            <i class="fa-brands fa-facebook-f text-xl"></i>
+          </div>
+          <div>
+            <h2 class="text-amber-200 font-semibold text-base">Những Điều Ở Lại ♡</h2>
+            <p class="text-amber-100/90 text-xs mt-1 leading-relaxed">Góc tản văn gia đình, tình người Đà Nẵng &amp; kết nối Fanpage chính thức.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PHẦN 1: ĐÀ NẴNG XƯA VÀ NAY (#xua-va-nay)
+  ====================================================================== -->
+  <section id="xua-va-nay" class="py-20 sm:py-24 bg-nostalgia relative overflow-hidden border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-ocean/10 text-ocean">
+          <i class="fa-solid fa-hourglass-half"></i> Chuyên mục 01 • Dòng Chảy Thời Gian
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-5xl font-serif font-bold text-ocean leading-tight">
+          Đà Nẵng Xưa Và Nay
+        </h2>
+        <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+          Từ một thương cảng bên cửa biển với những chuyến đò ngang mộc mạc, Đà Nẵng đã vươn mình trở thành thành phố của những cây cầu kỳ vĩ mà vẫn giữ vẹn nguyên hồn cốt hiền hòa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left 7 Cols: Interactive Image Comparison Slider -->
+        <div class="lg:col-span-7">
+          <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-magazine border border-slate-200/80">
+            <div id="comparison-box" class="comparison-slider-wrapper relative w-full h-[320px] sm:h-[430px] rounded-2xl overflow-hidden cursor-ew-resize">
+              <!-- AFTER IMAGE (Đà Nẵng Nay) -->
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Dragon_Bridge_in_Da_Nang_(far).jpg"
+                alt="Đà Nẵng ngày nay rực rỡ ánh sáng bên bờ sông Hàn và Cầu Rồng"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1400&q=85';"
+                class="w-full h-full object-cover object-center select-none pointer-events-none"
+              />
+              <span class="absolute top-4 right-4 z-15 px-3.5 py-1.5 rounded-full text-xs font-bold bg-ocean/90 text-white backdrop-blur-sm shadow">
+                🌟 ĐÀ NẴNG NAY • Thành phố những cây cầu
+              </span>
+
+              <!-- BEFORE IMAGE (Đà Nẵng Xưa - Ký ức phố cảng & bến đò) -->
+              <div id="comparison-before-layer" class="comparison-before">
+                <img
+                  id="comparison-before-img"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Da-Nang_Vietnam_Fisher-boats-01.jpg"
+                  alt="Ký ức bến đò, thuyền gỗ và nhịp sống phố cảng Đà Nẵng xưa"
+                  onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/NH_74143_Tourane_(Da_Nang)_Bay,_French_Indo-China.jpg';"
+                  class="h-full max-w-none object-cover object-center sepia-vintage select-none pointer-events-none"
+                />
+                <span class="absolute top-4 left-4 z-20 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-900/90 text-amber-100 backdrop-blur-sm shadow">
+                  🕰️ ĐÀ NẴNG XƯA • Ký ức phố cảng &amp; bến đò
+                </span>
+              </div>
+
+              <!-- Handle -->
+              <div id="comparison-handle" class="slider-handle">
+                <div class="slider-button">
+                  <i class="fa-solid fa-arrows-left-right text-sm"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 px-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <span class="text-xs font-semibold text-amber-900 flex items-center gap-1.5">
+                <i class="fa-solid fa-camera-retro"></i> Kéo sang phải để xem Đà Nẵng Xưa
+              </span>
+              <input
+                id="comparison-range"
+                type="range"
+                min="5"
+                max="95"
+                value="50"
+                aria-label="Thanh kéo so sánh Đà Nẵng xưa và nay"
+                class="w-full sm:w-48 accent-sunset cursor-pointer"
+              />
+              <span class="text-xs font-semibold text-ocean flex items-center gap-1.5">
+                Kéo sang trái để xem Đà Nẵng Nay <i class="fa-solid fa-city"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Cols: Era Switcher -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex p-1.5 rounded-2xl bg-slate-200/80 w-full">
+            <button type="button" data-era="xua" class="era-tab-btn flex-1 py-2.5 px-4 rounded-xl text-sm font-semibold transition bg-white text-ocean shadow-sm">
+              <i class="fa-solid fa-scroll mr-1.5 text-sunset"></i> Đà Nẵng Xưa
+            </button>
+            <button type="button" data-era="nay" class="era-tab-btn flex-1 py-2.5 px-4 rounded-xl text-sm font-semibold transition text-slate-600 hover:text-ocean">
+              <i class="fa-solid fa-bridge mr-1.5 text-sontra"></i> Đà Nẵng Nay
+            </button>
+            <button type="button" data-era="song-hanh" class="era-tab-btn flex-1 py-2.5 px-4 rounded-xl text-sm font-semibold transition text-slate-600 hover:text-ocean">
+              <i class="fa-solid fa-code-compare mr-1.5"></i> Đối chiếu
+            </button>
+          </div>
+
+          <div id="era-content-panel" class="bg-white rounded-3xl p-6 sm:p-8 shadow-magazine border border-slate-200/70 space-y-4"></div>
+        </div>
+      </div>
+
+      <!-- 4 Historical Comparison Milestones -->
+      <div class="mt-14">
+        <h3 class="text-center font-serif text-2xl font-bold text-ocean mb-8">
+          4 Cột Mốc Chuyển Mình Đáng Nhớ Của Thành Phố Bên Sông Hàn
+        </h3>
+        <div id="milestones-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PHẦN 2: 13 DANH THẮNG ĐẸP ĐƯỢC KHÁCH YÊU THÍCH (#danh-thang)
+       + HỘP THOẠI BẢN ĐỒ MAPS MÀU SẮC ẤN TƯỢNG
+  ====================================================================== -->
+  <section id="danh-thang" class="py-20 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-300">
+            <i class="fa-solid fa-map-location-dot"></i> Chuyên mục 02 • 13 Danh Thắng Nổi Tiếng Kèm Hộp Thoại Bản Đồ Maps
+          </span>
+          <h2 class="mt-3 text-3xl sm:text-5xl font-serif font-bold text-ocean leading-tight">
+            Những Danh Thắng Đẹp Được Khách Yêu Thích
+          </h2>
+          <p class="mt-3 text-slate-600 text-base sm:text-lg leading-relaxed">
+            Trọn bộ <strong>13 danh thắng tiêu biểu</strong> từ Cầu Rồng sông Hàn, biển Mỹ Khê, Bà Nà Hills – Cầu Vàng, Đỉnh Bàn Cờ, Mũi Nghê &amp; Hải đăng Tiên Sa, Nhà thờ Con Gà, Bảo tàng Chăm, Công viên APEC đến Phố cổ Hội An và Thánh địa Mỹ Sơn. Nhấn vào nút <strong class="text-emerald-700">🗺️ Bản đồ Maps</strong> trên mỗi thẻ để mở hộp thoại định vị nhanh!
+          </p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="w-full lg:w-80 shrink-0">
+          <div class="relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input
+              id="landmark-search"
+              type="text"
+              placeholder="Tìm danh thắng (vd: Bà Nà, Bàn Cờ, APEC...)"
+              class="w-full pl-11 pr-10 py-3 rounded-2xl bg-slate-100 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600 transition"
+            />
+            <button id="clear-landmark-search" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div id="landmark-filter-bar" class="flex flex-wrap items-center gap-2.5 mb-10">
+        <button type="button" data-category="all" class="landmark-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-ocean text-white shadow-sm transition">
+          Tất cả danh thắng (13)
+        </button>
+        <button type="button" data-category="Biển & Bán đảo" class="landmark-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-ocean/10 hover:text-ocean transition">
+          🌊 Biển &amp; Bán đảo (5)
+        </button>
+        <button type="button" data-category="Biểu tượng & Kiến trúc" class="landmark-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-ocean/10 hover:text-ocean transition">
+          🌉 Biểu tượng &amp; Kiến trúc (4)
+        </button>
+        <button type="button" data-category="Văn hóa & Di sản" class="landmark-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-ocean/10 hover:text-ocean transition">
+          🏛️ Văn hóa &amp; Di sản (4)
+        </button>
+      </div>
+
+      <!-- 13 Landmarks Grid -->
+      <div id="landmarks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PHẦN 3: 14 MÓN ĐẶC SẢN TRỨ DANH CỦA ĐÀ NẴNG (#dac-san)
+  ====================================================================== -->
+  <section id="dac-san" class="py-20 sm:py-24 bg-nostalgia-warm relative border-t border-amber-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sunset/15 text-sunset-deep border border-sunset/30">
+            <i class="fa-solid fa-kitchen-set"></i> Chuyên mục 03 • 14 Đặc Sản Chuẩn Vị Đầu Bếp Chuyên Nghiệp
+          </span>
+          <h2 class="mt-3 text-3xl sm:text-5xl font-serif font-bold text-ocean leading-tight">
+            Những Món Đặc Sản Trứ Danh Của Đà Nẵng
+          </h2>
+          <p class="mt-3 text-slate-700 text-base sm:text-lg leading-relaxed">
+            Khám phá <strong>14 món đặc sản trứ danh</strong> làm nên linh hồn ẩm thực Đà Nẵng: từ <em>Mì Quảng, Bánh tráng cuốn thịt heo hai đầu da, Bún chả cá, Bánh xèo nem lụi, Gỏi cá Nam Ô, Chè xoa xoa hạt lựu, Ốc hút chợ Cồn, Bánh canh ruộng, Chè chuối nướng, Cá nục hấp cuốn</em> đến <em>Cháo chờ Nam Ô, Bê thui Cầu Mống, Cao lầu và Chả bò Đà Nẵng</em>.
+          </p>
+        </div>
+
+        <!-- Food Search Box -->
+        <div class="w-full lg:w-80 shrink-0">
+          <div class="relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input
+              id="food-search"
+              type="text"
+              placeholder="Tìm món ăn (vd: Cháo chờ, Bê thui, Ốc hút...)"
+              class="w-full pl-11 pr-10 py-3 rounded-2xl bg-white border border-amber-300 text-sm focus:outline-none focus:ring-2 focus:ring-sunset transition shadow-sm"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Taste Filter Tabs -->
+      <div id="food-filter-bar" class="flex flex-wrap items-center gap-2.5 mb-10">
+        <button type="button" data-taste="all" class="food-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-sunset text-white shadow-sm transition">
+          Tất cả đặc sản (14)
+        </button>
+        <button type="button" data-taste="Món Nước & Sợi Truyền Thống" class="food-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-white text-slate-700 hover:bg-sunset/10 hover:text-sunset-deep transition">
+          🍜 Món Nước &amp; Sợi (5)
+        </button>
+        <button type="button" data-taste="Món Cuốn & Vị Biển Đà Nẵng" class="food-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-white text-slate-700 hover:bg-sunset/10 hover:text-sunset-deep transition">
+          🥬 Món Cuốn &amp; Vị Biển (5)
+        </button>
+        <button type="button" data-taste="Quà Vặt Chợ Cồn & Đặc Sản Quà Tặng" class="food-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-white text-slate-700 hover:bg-sunset/10 hover:text-sunset-deep transition">
+          🎁 Quà Vặt &amp; Quà Tặng (4)
+        </button>
+      </div>
+
+      <!-- 14 Specialties Grid -->
+      <div id="foods-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PHẦN 4: CON NGƯỜI ĐÀ NẴNG (#con-nguoi)
+  ====================================================================== -->
+  <section id="con-nguoi" class="py-20 sm:py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-ocean/10 text-ocean">
+          <i class="fa-solid fa-hands-holding-heart"></i> Chuyên mục 04 • Linh Hồn Của Thành Phố Đáng Sống
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-5xl font-serif font-bold text-ocean leading-tight">
+          Con Người Đà Nẵng – Chân Thành &amp; Nghĩa Tình
+        </h2>
+        <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+          Cảnh sắc có thể làm say mắt người lữ khách buổi ban đầu, nhưng chính nụ cười đôn hậu và tấm lòng chất phác của người Đà Nẵng mới là điều giữ chân người ta ở lại mãi.
+        </p>
+      </div>
+
+      <div id="people-stories-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
+
+      <!-- Cultural Quote Banner -->
+      <div class="mt-14 rounded-3xl bg-gradient-to-r from-ocean via-ocean-light to-sontra p-8 sm:p-12 text-white shadow-magazine relative overflow-hidden">
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-3">
+            <span class="px-3 py-1 rounded-full bg-white/15 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+              Thanh âm thân thương xứ Quảng – Đà
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold leading-snug">
+              “Đi mô rồi cũng nhớ về Đà Nẵng – Nhớ tiếng ‘răng, rứa, mô, tê’ mộc mạc mà thương đến lạ!”
+            </h3>
+            <p class="text-slate-100/90 text-sm sm:text-base leading-relaxed">
+              Người Đà Nẵng ăn sóng nói gió, thẳng tính, bộc trực nhưng trong bụng lại cực kỳ thương người. Khách lạ hỏi đường được chỉ dẫn tận nơi, quán xá bình dị luôn nở nụ cười xởi lởi như đón người thân đi xa mới về.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+            <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+              <div class="text-amber-300 font-bold text-sm">“Răng chừ mới tới chơi?”</div>
+              <div class="text-xs text-slate-200 mt-1">Lời hỏi thăm trách yêu đầy hiếu khách của người Đà Nẵng khi đón bạn phương xa.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+              <div class="text-amber-300 font-bold text-sm">“Ăn thêm miếng nữa nghe!”</div>
+              <div class="text-xs text-slate-200 mt-1">Sự hào sảng trong từng bữa cơm gia đình, từng gánh hàng quà quê bình dị.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PHẦN 5 (CUỐI TRANG): GÓC BLOG CÁ NHÂN & KẾT NỐI FANPAGE
+       "NHỮNG ĐIỀU Ở LẠI" (#nhung-dieu-o-lai)
+  ====================================================================== -->
+  <section id="nhung-dieu-o-lai" class="py-20 sm:py-28 bg-gradient-to-b from-[#FDF8EE] via-[#FAF0DC] to-[#F5E6C8] relative overflow-hidden border-t border-amber-200">
+    <div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-amber-400/20 blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-orange-400/15 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-800/10 text-amber-900 border border-amber-800/20">
+          <i class="fa-solid fa-feather-pointed text-sunset"></i> Góc Blog Cá Nhân &amp; Ngôi Nhà Tinh Thần
+        </span>
+        <h2 class="mt-4 text-4xl sm:text-6xl font-serif font-bold text-amber-950 leading-tight">
+          Những Điều <span class="font-script text-sunset text-5xl sm:text-7xl font-bold">Ở Lại</span> <span class="text-sunset">♡</span>
+        </h2>
+        <p class="mt-3 text-lg sm:text-xl font-serif italic text-amber-900/90">
+          “Có những yêu thương, năm tháng chẳng thể mang đi.”
+        </p>
+        <p class="mt-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+          Đi qua bao góc phố Đà Nẵng từ xưa đến nay, ngắm nhìn biển rộng sông dài, điều đọng lại sâu nhất trong tim vẫn là tình đất, tình người và những ký ức gia đình bình dị. Mời bạn ghé thăm góc nhỏ <strong>“Những điều Ở lại”</strong> để cùng mình lưu giữ và sẻ chia những câu chuyện ấm áp của cuộc sống.
+        </p>
+      </div>
+
+      <!-- FANPAGE SHOWCASE CARD -->
+      <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white mb-16">
+        <div class="relative min-h-[360px] sm:min-h-[440px] flex items-center overflow-hidden">
+          <img
+            id="fanpage-cover-img"
+            src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1800&q=85"
+            alt="Ảnh bìa Fanpage Những Điều Ở Lại - Hiên nhà hoàng hôn ấm áp tình thân"
+            onerror="this.onerror=null;this.src='https://placehold.co/1600x600/D97706/FFFFFF?text=Nhung+Dieu+O+Lai';"
+            class="absolute inset-0 w-full h-full object-cover object-center brightness-95"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-amber-950/80 via-amber-900/45 to-amber-100/75"></div>
+
+          <div class="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-12 py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Bảng gỗ "Nhà là nơi có yêu thương ♡" -->
+            <div class="lg:col-span-5 flex items-center gap-5">
+              <div class="wood-plaque rounded-2xl px-6 py-7 text-center text-amber-100 w-44 sm:w-48 shrink-0 transform -rotate-1 hover:rotate-0 transition duration-300">
+                <p class="font-script text-2xl sm:text-3xl leading-snug text-amber-50 drop-shadow">
+                  Nhà<br />là<br />nơi<br />có<br />yêu<br />thương
+                </p>
+                <div class="mt-2 text-xl text-amber-200">♡</div>
+              </div>
+
+              <div class="text-white space-y-2">
+                <span class="inline-block px-3 py-1 rounded-full bg-amber-400/25 border border-amber-200/40 text-amber-200 text-xs font-semibold">
+                  Hiên nhà bình yên
+                </span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold leading-snug">
+                  Nơi ông bà ngồi bên thềm hoa nắng ấm
+                </h3>
+                <p class="text-xs sm:text-sm text-amber-100/90 leading-relaxed">
+                  Dõi theo bước chân con cháu trở về dưới ánh hoàng hôn dịu dàng của quê hương.
+                </p>
+              </div>
+            </div>
+
+            <!-- Thông điệp & Nút vào thẳng Fanpage -->
+            <div class="lg:col-span-7 bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-9 text-center lg:text-right border border-amber-200/80 shadow-xl">
+              <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-800 mb-2">
+                <i class="fa-brands fa-facebook text-[#1877F2] text-base"></i>
+                <span>Trang Fanpage Facebook Chính Thức</span>
+              </div>
+              <div class="text-3xl sm:text-5xl font-serif font-bold text-amber-950 tracking-tight">
+                Những Điều <span class="font-script text-4xl sm:text-6xl text-sunset ml-1">Ở Lại ♡</span>
+              </div>
+              <p class="mt-3 font-serif italic text-base sm:text-xl text-amber-900">
+                “Có những yêu thương, năm tháng chẳng thể mang đi.”
+              </p>
+              <div class="my-4 flex items-center justify-center lg:justify-end gap-3 text-amber-700/60">
+                <span class="w-12 h-[1px] bg-amber-700/40"></span>
+                <i class="fa-regular fa-heart text-sm text-sunset"></i>
+                <span class="w-12 h-[1px] bg-amber-700/40"></span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 max-w-xl ml-auto leading-relaxed">
+                Nhấn vào nút bên dưới để vào trực tiếp trang Fanpage <strong>Những điều Ở lại</strong>, cùng đọc thêm những tản văn mới nhất, xem hình ảnh đời thường và kết nối trò chuyện cùng tác giả.
+              </p>
+
+              <div class="mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61594085625438&sk=about"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-[#1877F2] hover:bg-[#0d65d9] text-white font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition flex items-center justify-center gap-3 group"
+                >
+                  <i class="fa-brands fa-facebook text-xl"></i>
+                  <span>Ghé Thăm Fanpage "Những Điều Ở Lại" Trên Facebook</span>
+                  <i class="fa-solid fa-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                </a>
+                <button
+                  id="copy-fanpage-link-btn"
+                  type="button"
+                  onclick="copyFanpageUrl()"
+                  class="w-full sm:w-auto px-4 py-4 rounded-2xl bg-amber-100 hover:bg-amber-200 text-amber-950 font-semibold text-sm transition flex items-center justify-center gap-2"
+                >
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Sao chép link trang</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="px-6 sm:px-10 py-5 bg-white flex flex-col md:flex-row items-center justify-between gap-4 border-t border-slate-100">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-amber-600 to-amber-300 p-0.5 shadow-md shrink-0">
+              <div class="w-full h-full rounded-full bg-nostalgia flex items-center justify-center text-amber-900 font-script font-bold text-xl">
+                Ở Lại
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h4 class="font-bold text-slate-900 text-base sm:text-lg">Những điều Ở lại</h4>
+                <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-50 text-[#1877F2] border border-blue-200">
+                  <i class="fa-solid fa-circle-check mr-1"></i>Fanpage Chính Thức
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-500">
+                Góc lưu giữ ký ức Đà Nẵng, tình cảm gia đình và những điều bình dị đáng trân quý.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 w-full md:w-auto justify-end">
+            <a
+              href="https://www.facebook.com/profile.php?id=61594085625438&sk=about"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 md:flex-initial text-center px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-semibold transition"
+            >
+              <i class="fa-solid fa-circle-info mr-1.5 text-ocean"></i> Xem Giới thiệu Trang
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61594085625438&sk=about"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 md:flex-initial text-center px-5 py-2.5 rounded-xl bg-sunset hover:bg-amber-600 text-white text-xs sm:text-sm font-semibold shadow transition"
+            >
+              <i class="fa-solid fa-heart mr-1.5"></i> Theo dõi trên Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Featured Personal Blog Essays -->
+      <div>
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-amber-950">
+              Tản Văn &amp; Ghi Chép Từ Góc Nhỏ "Những Điều Ở Lại"
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base mt-1">
+              Nhấn vào từng bài viết để đọc trọn vẹn những dòng tâm sự về Đà Nẵng và gia đình.
+            </p>
+          </div>
+          <a
+            href="https://www.facebook.com/profile.php?id=61594085625438&sk=about"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-bold text-sunset-deep hover:text-ocean transition"
+          >
+            <span>Đọc thêm nhiều bài mới trên Fanpage</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div id="blog-posts-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER (CHÂN TRANG)
+  ====================================================================== -->
+  <footer class="bg-ocean-dark text-slate-300 pt-16 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sunset to-amber-500 flex items-center justify-center text-white font-bold shadow">
+              <i class="fa-solid fa-bridge-water"></i>
+            </div>
+            <span class="font-serif font-bold text-2xl text-white">
+              Đà Nẵng – Thành Phố Tôi Yêu
+            </span>
+          </div>
+          <p class="text-sm text-slate-300/90 leading-relaxed max-w-md">
+            Chuyên trang giới thiệu vẻ đẹp Đà Nẵng xưa và nay, 13 danh thắng nổi tiếng kèm Bản đồ Maps, 14 món đặc sản trứ danh chuẩn vị Đầu bếp, nét đẹp con người Đà Nẵng và góc tản văn cá nhân <strong>Những điều Ở lại</strong>.
+          </p>
+          <p class="font-serif italic text-amber-300 text-sm">
+            “Nhà là nơi có yêu thương – Có những yêu thương, năm tháng chẳng thể mang đi.”
+          </p>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Chuyên mục khám phá</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#hero" class="hover:text-amber-300 transition">Trang chủ Đà Nẵng Tôi Yêu</a></li>
+            <li><a href="#xua-va-nay" class="hover:text-amber-300 transition">Đà Nẵng Xưa và Nay</a></li>
+            <li><a href="#danh-thang" class="hover:text-amber-300 transition">13 Danh thắng &amp; Bản đồ Maps</a></li>
+            <li><a href="#dac-san" class="hover:text-amber-300 transition">14 Món đặc sản Đà Nẵng</a></li>
+            <li><a href="#con-nguoi" class="hover:text-amber-300 transition">Con người Đà Nẵng nghĩa tình</a></li>
+            <li><a href="#nhung-dieu-o-lai" class="text-amber-300 font-medium hover:underline">Góc Blog "Những Điều Ở Lại"</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Kết nối cùng tác giả</h4>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Ghé thăm và nhấn Theo dõi Fanpage <strong>Những điều Ở lại</strong> để đón đọc những câu chuyện ấm áp mỗi ngày:
+          </p>
+          <a
+            href="https://www.facebook.com/profile.php?id=61594085625438&sk=about"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-[#1877F2] hover:bg-[#0d65d9] text-white font-semibold text-sm shadow-lg transition w-full sm:w-auto justify-center"
+          >
+            <i class="fa-brands fa-facebook text-lg"></i>
+            <span>Fanpage: Những điều Ở lại</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </a>
+          <div class="text-xs text-slate-400 pt-1">
+            Triển khai trên GitHub Pages: <span class="text-slate-300 font-mono">binhan-tramy.github.io/danangtoiyeu-/</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© 2026 Đà Nẵng – Thành Phố Tôi Yêu &amp; Blog Những Điều Ở Lại. Giữ trọn yêu thương cùng năm tháng.</p>
+        <a href="#hero" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 transition">
+          <span>Lên đầu trang</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK-CONNECT FANPAGE BUTTON -->
+  <div class="fixed bottom-5 right-5 z-30 flex flex-col items-end gap-2">
+    <a
+      href="https://www.facebook.com/profile.php?id=61594085625438&sk=about"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group flex items-center gap-3 pl-4 pr-5 py-3 rounded-full bg-gradient-to-r from-[#1877F2] to-ocean text-white shadow-2xl border-2 border-white/90 hover:scale-105 transition-all duration-300"
+      title="Vào trang Fanpage Những điều Ở lại trên Facebook"
+    >
+      <span class="w-8 h-8 rounded-full bg-white text-[#1877F2] flex items-center justify-center shadow">
+        <i class="fa-brands fa-facebook-f text-base"></i>
+      </span>
+      <div class="text-left leading-tight">
+        <span class="block text-[10px] uppercase tracking-wider text-amber-200 font-semibold">Ghé thăm Fanpage</span>
+        <span class="block text-xs sm:text-sm font-bold">Những điều Ở lại ♡</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- =====================================================================
+       MODAL 1: HỘP THOẠI KHÁM PHÁ CHI TIẾT (#detail-modal)
+  ====================================================================== -->
+  <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/75 backdrop-blur-sm overflow-y-auto" role="dialog" aria-modal="true">
+    <div class="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden my-8 border border-slate-200">
+      <button id="close-detail-modal" type="button" onclick="closeDetailModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black/85 text-white flex items-center justify-center transition" aria-label="Đóng cửa sổ">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div id="detail-modal-body" class="max-h-[85vh] overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL 2: HỘP THOẠI BẢN ĐỒ MAPS MÀU SẮC ẤN TƯỢNG (#map-modal)
+  ====================================================================== -->
+  <div id="map-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-ocean-dark/85 backdrop-blur-md overflow-y-auto" role="dialog" aria-modal="true">
+    <div class="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border-2 border-emerald-400/60 bg-gradient-to-br from-ocean-dark via-[#073B4C] to-emerald-950 text-white my-8">
+      <!-- Impressive Gradient Header -->
+      <div class="p-5 sm:p-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-500 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl shadow-inner border border-white/30">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-black/25 text-amber-100 text-[11px] font-bold uppercase tracking-wider">
+              Bản Đồ Định Vị Nhanh &amp; Chỉ Đường Danh Thắng
+            </span>
+            <h3 id="map-modal-title" class="text-xl sm:text-2xl font-serif font-bold text-white mt-0.5"></h3>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="closeMapModal()"
+          class="w-10 h-10 rounded-full bg-black/30 hover:bg-black/55 text-white flex items-center justify-center text-lg font-bold transition shrink-0"
+          aria-label="Đóng bản đồ"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- 3 Quick Info Pills -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 sm:px-6 bg-white/5 border-b border-white/10 text-xs sm:text-sm">
+        <div class="p-3.5 rounded-2xl bg-white/10 border border-emerald-400/30">
+          <span class="text-emerald-300 font-bold block mb-0.5"><i class="fa-solid fa-location-dot mr-1"></i>Địa chỉ / Khu vực:</span>
+          <span id="map-modal-address" class="text-slate-100 block leading-snug"></span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-white/10 border border-amber-400/30">
+          <span class="text-amber-300 font-bold block mb-0.5"><i class="fa-solid fa-route mr-1"></i>Khoảng cách từ Cầu Rồng:</span>
+          <span id="map-modal-distance" class="text-slate-100 block leading-snug"></span>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-white/10 border border-cyan-400/30">
+          <span class="text-cyan-300 font-bold block mb-0.5"><i class="fa-solid fa-compass mr-1"></i>Tọa độ GPS:</span>
+          <span id="map-modal-coords" class="text-slate-100 block font-mono"></span>
+        </div>
+      </div>
+
+      <!-- Interactive Google Maps Embed -->
+      <div class="relative w-full h-[340px] sm:h-[420px] bg-slate-900">
+        <iframe
+          id="map-modal-iframe"
+          src=""
+          class="w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Bản đồ vị trí danh thắng Đà Nẵng"
+        ></iframe>
+      </div>
+
+      <!-- Footer -->
+      <div class="p-5 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-ocean-dark/95">
+        <p id="map-modal-note" class="text-xs sm:text-sm text-emerald-200"></p>
+        <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+          <a
+            id="map-modal-external"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold text-xs sm:text-sm shadow-lg transition flex items-center gap-2"
+          >
+            <i class="fa-solid fa-diamond-turn-right"></i>
+            <span>Mở Chỉ Đường Trên Google Maps</span>
+            <i class="fa-solid fa-up-right-from-square text-xs"></i>
+          </a>
+          <button
+            type="button"
+            onclick="closeMapModal()"
+            class="px-5 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-xs sm:text-sm transition"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL 3: STUDIO ẢNH ẨM THỰC ĐẦU BẾP (#photo-studio-modal)
+       (Cho phép nạp 1 hoặc cả 14 file ảnh gốc từ máy tính, tự động làm nét HD
+       và xuất ra file index.html nhúng sẵn ảnh nếu muốn)
+  ====================================================================== -->
+  <div id="photo-studio-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm overflow-y-auto" role="dialog" aria-modal="true">
+    <div class="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden my-8 border border-amber-200">
+      <div class="px-6 py-5 bg-gradient-to-r from-amber-900 via-sunset to-amber-600 text-white flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-wand-magic-sparkles text-2xl text-amber-200"></i>
+          <div>
+            <h3 class="font-serif font-bold text-xl">Studio Ảnh Ẩm Thực Đầu Bếp – 14 Món Đặc Sản Đà Nẵng</h3>
+            <p class="text-xs text-amber-100">Giữ đúng 100% hình ảnh thực tế từng món ăn của chị, tự động khử mờ &amp; làm tươi màu chuẩn HD</p>
+          </div>
+        </div>
+        <button type="button" onclick="closePhotoStudioModal()" class="w-9 h-9 rounded-full bg-black/25 hover:bg-black/45 text-white flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-6 max-h-[70vh] overflow-y-auto space-y-6">
+        <!-- Hướng dẫn & Nạp hàng loạt -->
+        <div class="p-5 rounded-2xl bg-amber-50 border border-amber-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div class="space-y-1 text-xs sm:text-sm text-amber-950">
+            <div class="font-bold text-base text-ocean">
+              <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Đã gắn sẵn toàn bộ 14 ảnh thực tế của chị!
+            </div>
+            <p class="leading-relaxed">
+              Mặc định website đang hiển thị đúng 14 bức ảnh thực tế của chị kèm bộ lọc nét <strong>Chef HDR</strong>. Ngoài ra, nếu chị để 14 file ảnh gốc (<code>mì quảng.png</code>, <code>Bánh tráng cuốn thịt heo.jpg</code>, <code>Cháo chờ Nam Ô.jpg</code>, <code>Bê thui cầu mống.jpg</code>...) trên máy, chị có thể bấm nút bên phải để nạp và nhúng thẳng vào 1 file HTML duy nhất.
+            </p>
+          </div>
+          <div class="shrink-0 flex flex-wrap gap-2">
+            <label class="cursor-pointer px-4 py-3 rounded-xl bg-ocean hover:bg-ocean-dark text-white text-xs sm:text-sm font-bold shadow transition inline-flex items-center gap-2">
+              <i class="fa-solid fa-folder-open"></i>
+              <span>Chọn Nhiều Ảnh Từ Máy (Tự Khớp Tên)</span>
+              <input id="batch-food-files" type="file" accept="image/*" multiple class="hidden" onchange="handleBatchFoodUpload(this.files)" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Danh sách 14 món trong Studio -->
+        <div id="studio-foods-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+      </div>
+
+      <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+        <button type="button" onclick="resetAllCustomFoodImages()" class="text-xs font-semibold text-rose-600 hover:underline">
+          Khôi phục đường dẫn mặc định
+        </button>
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            onclick="exportSelfContainedHtml()"
+            class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow transition flex items-center gap-2"
+          >
+            <i class="fa-solid fa-download"></i>
+            <span>Tải File index.html Hoàn Chỉnh Về Máy</span>
+          </button>
+          <button type="button" onclick="closePhotoStudioModal()" class="px-5 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs sm:text-sm font-semibold transition">
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL 4: SỔ TAY YÊU THÍCH (#favorites-modal)
+  ====================================================================== -->
+  <div id="favorites-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/75 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
+      <div class="px-6 py-5 bg-ocean text-white flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-heart text-rose-400 text-xl"></i>
+          <div>
+            <h3 class="font-serif font-bold text-xl">Sổ Tay Yêu Thích Đà Nẵng Của Bạn</h3>
+            <p class="text-xs text-slate-200">Những danh thắng và món ngon bạn đã thả tim lưu lại</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeFavoritesModal()" class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="favorites-modal-list" class="p-6 max-h-[65vh] overflow-y-auto space-y-3"></div>
+      <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
+        <button type="button" onclick="clearAllFavorites()" class="text-xs font-semibold text-rose-600 hover:underline">
+          Xóa toàn bộ danh sách
+        </button>
+        <button type="button" onclick="closeFavoritesModal()" class="px-5 py-2 rounded-xl bg-ocean text-white text-sm font-semibold hover:bg-ocean-dark transition">
+          Đóng sổ tay
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container" class="fixed top-24 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- =====================================================================
+       JAVASCRIPT: TOÀN BỘ DỮ LIỆU & TƯƠNG TÁC (HOÀN CHỈNH 100%)
+  ====================================================================== -->
+  <script>
+    const SITE_CONFIG = {
+      siteName: "Đà Nẵng – Thành Phố Tôi Yêu",
+      fanpageName: "Những điều Ở lại",
+      fanpageUrl: "https://www.facebook.com/profile.php?id=61594085625438&sk=about",
+      storageKey: "danang_toiyeu_favorites_v3",
+      customImgStorageKey: "danang_toiyeu_custom_food_imgs_v3"
+    };
+
+    // Nơi lưu ảnh đã được làm nét Canvas nếu chủ web nạp trực tiếp từ máy
+    let CUSTOM_FOOD_IMAGES = {};
+    try {
+      const savedImgs = localStorage.getItem(SITE_CONFIG.customImgStorageKey);
+      if (savedImgs) CUSTOM_FOOD_IMAGES = JSON.parse(savedImgs);
+    } catch (e) {}
+
+    let currentChefFilterMode = "hdr"; // 'hdr' | 'super' | 'original'
+
+    /**
+     * DỮ LIỆU PHẦN 1: ĐÀ NẴNG XƯA VÀ NAY
+     */
+    const ERA_DATA = {
+      xua: {
+        badge: "Ký ức Tourane & Bến sông Hàn xưa",
+        title: "Đà Nẵng Xưa – Nhịp Đò Ngang & Phố Thị Bình Dị",
+        summary: "Trong ký ức của bao thế hệ, Đà Nẵng xưa là một vùng đất đầu biển cuối sông mộc mạc. Khi những cây cầu hiện đại chưa nối nhịp đôi bờ, người dân bên quận Nhất (Hải Châu) sang quận Ba (Sơn Trà, Ngũ Hành Sơn) vẫn quen thuộc với những chuyến đò ngang sông Hàn mỗi sớm mai.",
+        bullets: [
+          "Những con đường rợp bóng cây dọc đường Bạch Đằng, Trần Phú với tiếng chuông Nhà thờ Con Gà ngân vang.",
+          "Làng chài Thanh Khê, Nam Ô, Mân Thái mỗi bình minh rộn ràng tiếng gọi nhau kéo lưới rùng bên bờ cát.",
+          "Chợ Hàn, Chợ Cồn xưa mộc mạc với những gánh mì Quảng, bún chả cá, chè xoa xoa ấm áp tình làng nghĩa xóm."
+        ],
+        quote: "“Đà Nẵng xưa nghèo mà vui, bước ra ngõ là gặp người quen, tiếng gọi nhau qua bến đò ngang ngân dài trên mặt nước sông Hàn lấp lánh.”"
+      },
+      nay: {
+        badge: "Đô thị biển năng động & Thành phố của những cây cầu",
+        title: "Đà Nẵng Nay – Vươn Mình Ra Biển Lớn",
+        summary: "Từ ngày trở thành thành phố trực thuộc Trung ương đến nay, Đà Nẵng đã viết nên câu chuyện quy hoạch và phát triển kỳ diệu. Đôi bờ sông Hàn được nối liền bởi những cây cầu mang tầm vóc biểu tượng kiến trúc.",
+        bullets: [
+          "Cầu Sông Hàn – cây cầu quay đầu tiên do chính kỹ sư, công nhân Việt Nam thiết kế và thi công bằng sự đồng lòng của nhân dân.",
+          "Cầu Rồng vươn mình ra biển Đông, Công viên APEC cánh diều bay cao, Cầu Trần Thị Lý và Cầu Thuận Phước hiện đại.",
+          "Đại lộ ven biển Võ Nguyên Giáp – Hoàng Sa – Trường Sa kết nối biển Mỹ Khê, bán đảo Sơn Trà đến Phố cổ Hội An."
+        ],
+        quote: "“Đà Nẵng hôm nay hiện đại, khang trang và rực rỡ ánh đèn, nhưng buổi chiều ra bờ sông Hàn hóng gió vẫn thấy vẹn nguyên sự bình yên dễ chịu.”"
+      },
+      "song-hanh": {
+        badge: "Sự giao thoa giữa ký ức và hiện đại",
+        title: "Giữ Trọn Hồn Xưa Trong Nhịp Sống Mới",
+        summary: "Điều làm nên sức hút riêng biệt của Đà Nẵng không chỉ là những tòa nhà cao tầng hay lễ hội pháo hoa quốc tế, mà là cách thành phố nâng niu những giá trị truyền thống giữa lòng đô thị mới.",
+        bullets: [
+          "Sông Hàn xưa chia cắt đôi bờ bằng nhịp đò ngang – Sông Hàn nay là trục cảnh quan rực rỡ kết nối toàn thành phố.",
+          "Những làng nghề truyền thống hơn 400 năm như Đá mỹ nghệ Non Nước, Nước mắm & Cháo chờ Nam Ô vẫn giữ trọn hương vị xưa.",
+          "Giữa phố xá hiện đại, người Đà Nẵng vẫn giữ thói quen dậy sớm tắm biển Mỹ Khê, thưởng thức tô mì Quảng quê nhà và sống chan hòa, nghĩa tình."
+        ],
+        quote: "“Phố có thể rộng hơn, cầu có thể dài hơn, nhưng tình người Đà Nẵng thì năm tháng nào cũng đằm thắm như nước sông Hàn.”"
+      }
+    };
+
+    const MILESTONES_DATA = [
+      {
+        era: "Xưa & Nay • Giao thông đôi bờ",
+        title: "Từ Bến Đò Ngang Đến Cầu Quay Sông Hàn",
+        xua: "Đò ngang, phà gỗ nối bờ Tây (Hải Châu) và bờ Đông (Sơn Trà) đầy cách trở mỗi mùa mưa bão.",
+        nay: "Khánh thành Cầu Sông Hàn (2000) mở ra kỷ nguyên phát triển bùng nổ về phía biển Đông.",
+        icon: "fa-bridge-water"
+      },
+      {
+        era: "Xưa & Nay • Diện mạo ven biển",
+        title: "Từ Xóm Chài Cát Trắng Đến Đại Lộ Biển",
+        xua: "Những đồi cát hoang sơ, rặng phi lao chắn gió và xóm chài nhỏ ven biển Mỹ Khê – Phước Mỹ.",
+        nay: "Cung đường biển Võ Nguyên Giáp – Hoàng Sa sầm uất, nằm trong top bãi biển quyến rũ nhất hành tinh.",
+        icon: "fa-umbrella-beach"
+      },
+      {
+        era: "Xưa & Nay • Không gian bờ sông",
+        title: "Từ Bến Bạch Đằng Xưa Đến Công Viên APEC",
+        xua: "Bến nước bình dị nơi tàu thuyền neo đậu dọc bờ Tây sông Hàn.",
+        nay: "Công viên APEC với mái vòm cánh diều bay cao và phố đi bộ Bạch Đằng rực rỡ ánh sáng.",
+        icon: "fa-archway"
+      },
+      {
+        era: "Xưa & Nay • Đời sống ẩm thực",
+        title: "Chợ Cồn, Chợ Hàn & Hồn Quê Giữa Phố",
+        xua: "Nơi giao thương nông sản, hải sản tươi sống của bà con xứ Quảng – Đà từ sáng tinh mơ.",
+        nay: "Thiên đường ẩm thực với Mì Quảng, Ốc hút, Bánh canh ruộng, Chè xoa xoa níu chân du khách.",
+        icon: "fa-basket-shopping"
+      }
+    ];
+
+    /**
+     * DỮ LIỆU PHẦN 2: 12 DANH THẮNG ĐẸP ĐƯỢC KHÁCH YÊU THÍCH KÈM TỌA ĐỘ BẢN ĐỒ MAPS
+     */
+    const LANDMARKS_DATA = [
+      {
+        id: "lm-cau-rong",
+        name: "Cầu Rồng & Sông Hàn Về Đêm",
+        category: "Biểu tượng & Kiến trúc",
+        badge: "Biểu tượng Đà Nẵng",
+        location: "Đường Nguyễn Văn Linh, Quận Hải Châu – Sơn Trà, TP. Đà Nẵng",
+        distance: "Ngay trung tâm thành phố (0 km)",
+        coords: "16.0611° N, 108.2275° E",
+        mapQuery: "Cau+Rong+Da+Nang",
+        bestTime: "19h00 – 21h30 (Đặc biệt 21h00 tối Thứ 6, Thứ 7, Chủ Nhật phun lửa & nước)",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dragon_Bridge_in_Da_Nang_(far).jpg",
+        fallback: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=85",
+        shortDesc: "Biểu tượng kiến trúc vươn mình ra biển lớn của Đà Nẵng với màn trình diễn phun lửa, phun nước độc đáo vào mỗi dịp cuối tuần.",
+        story: "Khánh thành năm 2013, Cầu Rồng dài 666m mang hình dáng con rồng thời Lý bay ra biển Đông, thể hiện khát vọng vươn lên mạnh mẽ của thành phố Đà Nẵng. Khi màn đêm buông xuống, hàng ngàn đèn LED đổi màu phản chiếu xuống dòng sông Hàn thơ mộng tạo nên khung cảnh lung linh say lòng du khách.",
+        tips: "Bạn có thể tản bộ trên đường Bạch Đằng, ghé Công viên APEC, Cầu Tình Yêu ở bờ Đông hoặc trải nghiệm du thuyền sông Hàn để ngắm trọn vẹn khoảnh khắc Cầu Rồng phun lửa, phun nước lúc 21h00."
+      },
+      {
+        id: "lm-my-khe",
+        name: "Bãi Biển Mỹ Khê",
+        category: "Biển & Bán đảo",
+        badge: "Biển quyến rũ nhất hành tinh",
+        location: "Đường Võ Nguyên Giáp, Phường Phước Mỹ, Quận Sơn Trà, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng khoảng 2,5 km (5 phút di chuyển)",
+        coords: "16.0598° N, 108.2465° E",
+        mapQuery: "Bai+Bien+My+Khe+Da+Nang",
+        bestTime: "Bình minh 05h00 – 07h30 hoặc chiều mát 16h00 – 18h00",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85",
+        fallback: "https://placehold.co/800x600/088395/FFFFFF?text=Bien+My+Khe",
+        shortDesc: "Dải cát trắng mịn trải dài, làn nước biển trong xanh ấm áp quanh năm từng được tạp chí Forbes vinh danh là một trong những bãi biển quyến rũ nhất hành tinh.",
+        story: "Biển Mỹ Khê không chỉ là niềm tự hào của du lịch Đà Nẵng mà còn là một phần hơi thở đời sống của người dân địa phương. Mỗi sáng sớm khi mặt trời vừa nhô lên khỏi đường chân trời, người dân và du khách lại cùng nhau tắm biển, dạo bộ trên cát mịn và ngắm những chiếc thuyền thúng cập bờ.",
+        tips: "Đừng bỏ lỡ khoảnh khắc đón bình minh lúc 5h15 sáng tại Mỹ Khê, khi ánh nắng vàng cam đầu tiên nhuộm hồng cả mặt biển và bán đảo Sơn Trà phía xa."
+      },
+      {
+        id: "lm-ba-na-hills",
+        name: "Sun World Bà Nà Hills & Cầu Vàng",
+        category: "Biểu tượng & Kiến trúc",
+        badge: "Đường lên tiên cảnh & Cầu Vàng",
+        location: "Thôn An Sơn, Xã Hòa Ninh, Huyện Hòa Vang, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng khoảng 25 km (~40 phút di chuyển)",
+        coords: "15.9951° N, 107.9957° E",
+        mapQuery: "Sun+World+Ba+Na+Hills+Cau+Vang+Da+Nang",
+        bestTime: "07h30 – 16h30 (Trải nghiệm 4 mùa trong 1 ngày & săn mây tại Cầu Vàng)",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Bridge_above_the_clouds_Ba_Na_Hills_Da_Nang_Vietnam.jpg",
+        fallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Bridge,_Ba_Na_Hills,_Vietnam_(49056988532).jpg",
+        shortDesc: "Tọa lạc trên đỉnh núi Chúa ở độ cao 1.487m giữa biển mây bồng bềnh, nổi bật với tuyệt tác Cầu Vàng được nâng đỡ bởi đôi bàn tay rêu phong khổng lồ và Làng Pháp cổ kính.",
+        story: "Sun World Bà Nà Hills được mệnh danh là 'chốn bồng lai tiên cảnh' của Đà Nẵng, nơi du khách có thể cảm nhận rõ rệt 4 mùa Xuân – Hạ – Thu – Đông chỉ trong một ngày. Tuyến cáp treo đạt nhiều kỷ lục thế giới đưa du khách băng qua rừng nguyên sinh và thác Tóc Tiên tung bọt trắng xóa.\n\nĐiểm nhấn làm say lòng du khách toàn cầu chính là Cầu Vàng (Golden Bridge) ở độ cao hơn 1.414m – dải lụa vàng óng ả vắt ngang bầu trời được nâng đỡ bởi đôi bàn tay đá rêu phong vĩ đại, cùng khu Làng Pháp lãng mạn, vườn hoa Le Jardin D'Amour rực rỡ và chùa Linh Ứng Bà Nà thanh tịnh.",
+        tips: "Bạn nên khởi hành đi cáp treo chuyến sớm từ 7h30 – 8h00 sáng để chụp ảnh tại Cầu Vàng lúc vắng người và săn được biển mây bồng bềnh đẹp nhất."
+      },
+      {
+        id: "lm-son-tra",
+        name: "Bán Đảo Sơn Trà & Chùa Linh Ứng Bãi Bụt",
+        category: "Biển & Bán đảo",
+        badge: "Lá phổi xanh & Tâm linh",
+        location: "Bãi Bụt, Phường Thọ Quang, Quận Sơn Trà, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng khoảng 10 km (18 phút di chuyển)",
+        coords: "16.1003° N, 108.2778° E",
+        mapQuery: "Chua+Linh+Ung+Bai+But+Son+Tra+Da+Nang",
+        bestTime: "Buổi sáng 07h00 – 10h00 hoặc chiều 15h00 – 17h30",
+        image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=85",
+        fallback: "https://placehold.co/800x600/0A4D68/FFFFFF?text=Ban+Dao+Son+Tra",
+        shortDesc: "“Lá phổi xanh” nguyên sinh ôm trọn vịnh Đà Nẵng, nơi tọa lạc Chùa Linh Ứng Bãi Bụt với tượng Phật Bà Quan Âm cao 67m hướng nhìn ra biển Đông.",
+        story: "Bán đảo Sơn Trà như bức bình phong thiên nhiên che chắn gió bão cho thành phố Đà Nẵng. Nơi đây sở hữu hệ sinh thái rừng nguyên sinh giao hòa cùng biển cả. Tượng Phật Bà Quan Âm tại chùa Linh Ứng lưng tựa núi Sơn Trà, mắt hiền từ dõi theo những đoàn tàu đánh cá ngoài khơi được người dân tin tưởng là điểm tựa tâm linh bình an.",
+        tips: "Từ Chùa Linh Ứng, bạn có thể kết hợp hành trình khám phá Đỉnh Bàn Cờ, Mũi Nghê và Hải đăng Tiên Sa trên cùng bán đảo Sơn Trà."
+      },
+      {
+        id: "lm-dinh-ban-co",
+        name: "Đỉnh Bàn Cờ",
+        category: "Biển & Bán đảo",
+        badge: "Nóc nhà Sơn Trà (~700m)",
+        location: "Đỉnh núi Sơn Trà, Phường Thọ Quang, Quận Sơn Trà, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng khoảng 16 km (35 phút di chuyển)",
+        coords: "16.1194° N, 108.2719° E",
+        mapQuery: "Dinh+Ban+Co+Son+Tra+Da+Nang",
+        bestTime: "Sáng sớm 05h30 – 08h30 hoặc chiều 15h30 – 17h15",
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85",
+        fallback: "https://placehold.co/800x600/0A4D68/FFFFFF?text=Dinh+Ban+Co",
+        shortDesc: "Đỉnh Bàn Cờ là nơi lý tưởng để ngắm toàn cảnh thành phố Đà Nẵng từ trên cao. Địa điểm này nằm ở độ cao gần 700m, nổi bật với tượng ông tiên đánh cờ cùng background núi rừng và biển trời rộng lớn.",
+        story: "Đỉnh Bàn Cờ là nơi lý tưởng để ngắm toàn cảnh thành phố Đà Nẵng từ trên cao. Địa điểm này nằm ở độ cao gần 700m, nổi bật với tượng ông tiên đánh cờ cùng background núi rừng và biển trời rộng lớn.\n\nĐường lên đỉnh khá đẹp nhưng có nhiều đoạn dốc và cua gấp, phù hợp với những du khách thích trải nghiệm cảm giác chinh phục.",
+        tips: "Lưu ý khi di chuyển lên Đỉnh Bàn Cờ cần sử dụng xe số (quy định an toàn trên bán đảo Sơn Trà), kiểm tra phanh xe kỹ và nên đi xuống trước khi trời tối."
+      },
+      {
+        id: "lm-mui-nghe-tien-sa",
+        name: "Mũi Nghê & Hải Đăng Tiên Sa",
+        category: "Biển & Bán đảo",
+        badge: "Đón bình minh đầu tiên",
+        location: "Phía Đông Bán đảo Sơn Trà, Phường Thọ Quang, Quận Sơn Trà, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng khoảng 15 km (30 phút di chuyển)",
+        coords: "16.1249° N, 108.3274° E",
+        mapQuery: "Hai+Dang+Tien+Sa+Son+Tra+Da+Nang",
+        bestTime: "Bình minh 05h15 – 09h30 hoặc chiều 14h30 – 17h00",
+        image: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1200&q=85",
+        fallback: "https://placehold.co/800x600/088395/FFFFFF?text=Mui+Nghe+Hai+Dang+Tien+Sa",
+        shortDesc: "Mũi Nghê được xem là nơi đón bình minh đầu tiên tại Đà Nẵng với ghềnh đá tự nhiên hoang sơ; Hải đăng Tiên Sa là một trong những ngọn hải đăng cổ đẹp nhất miền Trung.",
+        story: "Mũi Nghê được xem là nơi đón bình minh đầu tiên tại Đà Nẵng. Khu vực này nổi bật với ghềnh đá tự nhiên, làn nước trong xanh và khung cảnh còn khá hoang sơ.\n\nTrong khi đó, Hải đăng Tiên Sa là một trong những ngọn hải đăng cổ đẹp nhất miền Trung, mang đến góc nhìn tuyệt đẹp ra biển và bán đảo Sơn Trà.",
+        tips: "Hải đăng Tiên Sa có kiến trúc Pháp cổ điển màu vàng – trắng rất ăn ảnh, nằm trên cung đường nhựa thuận tiện để kết hợp tham quan trong buổi sáng."
+      },
+      {
+        id: "lm-nha-tho-con-ga",
+        name: "Nhà Thờ Chính Tòa (Nhà Thờ Con Gà)",
+        category: "Biểu tượng & Kiến trúc",
+        badge: "Kiến trúc Gothic sắc hồng",
+        location: "156 Trần Phú, Phường Hải Châu 1, Quận Hải Châu, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng chỉ 1 km (3 phút di chuyển)",
+        coords: "16.0668° N, 108.2238° E",
+        mapQuery: "Nha+Tho+Chinh+Toa+Da+Nang+156+Tran+Phu",
+        bestTime: "08h00 – 11h30 và 14h00 – 17h00 hàng ngày",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Nh%C3%A0_th%E1%BB%9D_Con_G%C3%A0_%C4%90%C3%A0_N%E1%BA%B5ng.jpg",
+        fallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Da_Nang_Cathedral_in_2015_08.jpg",
+        shortDesc: "Nhà thờ Chính Tòa Đà Nẵng được xây dựng từ thời Pháp thuộc với kiến trúc Gothic đặc trưng, gam màu hồng nổi bật và tượng gà màu xám trên nóc.",
+        story: "Nhà thờ Chính Tòa Đà Nẵng được xây dựng từ thời Pháp thuộc với kiến trúc Gothic đặc trưng và gam màu hồng nổi bật. Trên nóc nhà thờ có tượng gà màu xám nên người dân thường gọi là Nhà thờ Con Gà. Đây là một trong những địa danh nổi tiếng ở Đà Nẵng thu hút nhiều du khách đến tham quan và chụp ảnh.",
+        tips: "Sau khi chụp ảnh tại Nhà thờ Con Gà, bạn chỉ cần đi bộ vài trăm mét là tới Chợ Hàn để thưởng thức các món quà vặt và mua đặc sản Đà Nẵng."
+      },
+      {
+        id: "lm-bao-tang-cham",
+        name: "Bảo Tàng Điêu Khắc Chăm",
+        category: "Văn hóa & Di sản",
+        badge: "Di sản văn hóa Chăm Pa",
+        location: "Số 02 Đường 2 Tháng 9, Phường Bình Hiên, Quận Hải Châu, TP. Đà Nẵng",
+        distance: "Ngay chân Cầu Rồng bờ Tây (200m)",
+        coords: "16.0604° N, 108.2235° E",
+        mapQuery: "Bao+Tang+Dieu+Khac+Cham+Da+Nang",
+        bestTime: "07h30 – 17h00 tất cả các ngày trong tuần",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sandstone_sculpture_displayed_at_the_Museum_of_Cham_Sculpture_without_a_label_I.JPG",
+        fallback: "https://placehold.co/800x600/785A3C/FFFFFF?text=Bao+Tang+Dieu+Khac+Cham",
+        shortDesc: "Bảo tàng Điêu khắc Chăm là nơi lưu giữ bộ sưu tập hiện vật văn hóa Chăm Pa lớn nhất Việt Nam với nhiều tác phẩm điêu khắc bằng sa thạch hàng trăm năm tuổi.",
+        story: "Bảo tàng Điêu khắc Chăm là nơi lưu giữ bộ sưu tập hiện vật văn hóa Chăm Pa lớn nhất Việt Nam. Không gian trưng bày gồm nhiều tác phẩm điêu khắc bằng sa thạch có niên đại hàng trăm năm. Nếu yêu thích lịch sử và văn hóa miền Trung, đây là điểm đến rất đáng trải nghiệm khi khám phá các danh lam thắng cảnh Đà Nẵng.",
+        tips: "Bảo tàng nằm ngay giao lộ đường Bạch Đằng – 2 Tháng 9 đối diện Cầu Rồng và sát cạnh Công viên APEC, rất tiện kết hợp tham quan trong cùng một buổi."
+      },
+      {
+        id: "lm-cong-vien-apec",
+        name: "Công Viên APEC",
+        category: "Biểu tượng & Kiến trúc",
+        badge: "Mái vòm Cánh Diều sông Hàn",
+        location: "Đường 2 Tháng 9 (Bên bờ sông Hàn), Quận Hải Châu, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng 300m (3 phút đi bộ dọc sông Hàn)",
+        coords: "16.0589° N, 108.2242° E",
+        mapQuery: "Cong+Vien+APEC+Da+Nang",
+        bestTime: "Chiều mát 16h00 – 18h00 hoặc buổi tối 19h00 – 22h00",
+        image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1200&q=85",
+        fallback: "https://placehold.co/800x600/0A4D68/FFFFFF?text=Cong+Vien+APEC+Da+Nang",
+        shortDesc: "Nằm bên bờ sông Hàn, công viên gây ấn tượng với thiết kế mái vòm độc đáo lấy cảm hứng từ hình cánh diều bay trong gió cùng không gian xanh hiện đại.",
+        story: "Công viên APEC là một trong những công trình mới mang tính biểu tượng nơi đây và cũng là điểm du lịch Đà Nẵng mà bạn có thể cân nhắc để thêm vào lịch trình của mình. Nằm bên bờ sông Hàn, công viên gây ấn tượng với thiết kế mái vòm độc đáo lấy cảm hứng từ hình cánh diều bay trong gió.\n\nKhông gian hiện đại, nhiều mảng xanh cùng vị trí trung tâm giúp nơi đây trở thành địa điểm thư giãn và chụp ảnh được nhiều du khách yêu thích. Vào buổi tối, khu vực này càng trở nên sôi động nhờ hệ thống chiếu sáng đẹp mắt và các hoạt động cộng đồng diễn ra thường xuyên.",
+        tips: "Buổi tối đứng từ tầng vòm Công viên APEC nhìn ra Cầu Rồng và phố đi bộ Bạch Đằng là một trong những góc chụp ảnh đêm đẹp nhất Đà Nẵng."
+      },
+      {
+        id: "lm-ngu-hanh-son",
+        name: "Danh Thắng Ngũ Hành Sơn (Non Nước)",
+        category: "Văn hóa & Di sản",
+        badge: "Kim - Mộc - Thủy - Hỏa - Thổ",
+        location: "81 Huyền Trân Công Chúa, Phường Hòa Hải, Quận Ngũ Hành Sơn, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng khoảng 8,5 km (15 phút di chuyển)",
+        coords: "16.0033° N, 108.2636° E",
+        mapQuery: "Danh+Thang+Ngu+Hanh+Son+Da+Nang",
+        bestTime: "Buổi sáng 07h30 – 10h30 (Ánh nắng chiếu qua vòm động Huyền Không)",
+        image: "https://images.unsplash.com/photo-1557750255-c76072a7aad1?auto=format&fit=crop&w=1200&q=85",
+        fallback: "https://placehold.co/800x600/0A4D68/FFFFFF?text=Ngu+Hanh+Son",
+        shortDesc: "Quần thể 5 ngọn núi đá vôi Kim – Mộc – Thủy – Hỏa – Thổ tuyệt đẹp mọc lên giữa vùng cát ven biển, ẩn chứa những hang động kỳ ảo và chùa cổ trăm năm.",
+        story: "Ngũ Hành Sơn là di tích quốc gia đặc biệt hội tụ vẻ đẹp thiên nhiên kỳ vĩ và chiều sâu văn hóa tâm linh xứ Quảng – Đà. Trên ngọn Thủy Sơn, du khách sẽ ngỡ ngàng trước vẻ đẹp huyền ảo của động Huyền Không khi những tia nắng tự nhiên xuyên qua vòm đá rọi sáng tượng Phật, cùng ngôi chùa Tam Thai, chùa Linh Ứng Non Nước cổ kính.",
+        tips: "Sau khi tham quan trên núi, bạn hãy ghé thăm Làng đá mỹ nghệ Non Nước ngay dưới chân núi và tiếp tục hành trình thêm 18km nữa là tới Phố cổ Hội An."
+      },
+      {
+        id: "lm-hai-van",
+        name: "Đèo Hải Vân & Ghềnh Đá Nam Ô",
+        category: "Biển & Bán đảo",
+        badge: "Thiên hạ đệ nhất hùng quan",
+        location: "Phường Hòa Hiệp Bắc, Quận Liên Chiểu, TP. Đà Nẵng",
+        distance: "Cách Cầu Rồng khoảng 22 km (35 phút di chuyển)",
+        coords: "16.1886° N, 108.1319° E",
+        mapQuery: "Hai+Van+Quan+Deo+Hai+Van+Da+Nang",
+        bestTime: "06h00 – 09h00 hoặc Hoàng hôn 15h30 – 17h45",
+        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85",
+        fallback: "https://placehold.co/800x600/0A4D68/FFFFFF?text=Deo+Hai+Van",
+        shortDesc: "“Thiên hạ đệ nhất hùng quan” nơi những khúc cua uốn lượn giữa mây ngàn và biển biếc, ôm trọn vịnh Đà Nẵng và làng chài cổ Nam Ô dưới chân đèo.",
+        story: "Đèo Hải Vân cao 500m cắt ngang dãy Bạch Mã vươn ra sát biển. Trên đỉnh đèo là di tích Hải Vân Quan cổ kính trầm mặc chứng kiến bao thăng trầm lịch sử. Phía dưới chân đèo địa phận Đà Nẵng là rạn đá Nam Ô hoang sơ và làng nghề nước mắm, gỏi cá, cháo chờ Nam Ô trứ danh.",
+        tips: "Khi xuống chân đèo Hải Vân phía Đà Nẵng, đừng quên ghé làng Nam Ô thưởng thức tô Cháo chờ nóng hổi hoặc đĩa Gỏi cá trích tươi ngon."
+      },
+      {
+        id: "lm-hoi-an",
+        name: "Phố Cổ Hội An",
+        category: "Văn hóa & Di sản",
+        badge: "Di sản Thế giới UNESCO",
+        location: "Phường Minh An, TP. Hội An (Kết nối liền mạch từ Đà Nẵng)",
+        distance: "Cách trung tâm Đà Nẵng khoảng 28 km (~30 phút di chuyển)",
+        coords: "15.8794° N, 108.3350° E",
+        mapQuery: "Pho+Co+Hoi+An+Ancient+Town",
+        bestTime: "Chiều và tối từ 15h30 – 21h30 (Ngắm phố đèn lồng bên sông Hoài)",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Hoi_An_Ancient_Town.jpg",
+        fallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Hoi_An_Ancient_Town,_Vietnam_(7090625471).jpg",
+        shortDesc: "Chỉ cách trung tâm Đà Nẵng khoảng 30 phút di chuyển, Hội An nổi tiếng với những ngôi nhà mái ngói vàng cổ kính và khung cảnh đèn lồng rực rỡ bên dòng sông Hoài.",
+        story: "Chỉ cách trung tâm Đà Nẵng khoảng 30 phút di chuyển, Hội An là điểm đến thường được kết hợp trong hầu hết các hành trình khám phá miền Trung. Phố cổ nổi tiếng với những ngôi nhà mái ngói vàng đặc trưng, các con hẻm nhỏ và không gian văn hóa được bảo tồn gần như nguyên vẹn qua nhiều thế kỷ.\n\nBan ngày, du khách có thể tham quan các hội quán, nhà cổ và thưởng thức đặc sản địa phương. Khi đêm xuống, ánh đèn lồng rực rỡ phản chiếu trên dòng sông Hoài tạo nên khung cảnh lãng mạn, khiến Hội An trở thành một trong những điểm đến được yêu thích nhất khu vực.",
+        tips: "Ghé Hội An vào chiều muộn, đừng quên thưởng thức một tô Cao Lầu thịt xá xíu thơm lừng và thả hoa đăng trên dòng sông Hoài thơ mộng."
+      },
+      {
+        id: "lm-my-son",
+        name: "Thánh Địa Mỹ Sơn",
+        category: "Văn hóa & Di sản",
+        badge: "Di sản Thế giới UNESCO",
+        location: "Xã Duy Phú, Huyện Duy Xuyên, Quảng Nam (Cách Đà Nẵng ~70km)",
+        distance: "Cách trung tâm Đà Nẵng khoảng 68 – 70 km (~1 giờ 15 phút)",
+        coords: "15.7644° N, 108.1242° E",
+        mapQuery: "Thanh+Dia+My+Son+Sanctuary",
+        bestTime: "Buổi sáng 07h30 – 10h30 (Trời mát, xem biểu diễn múa Chăm Apsara)",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/0040223_My_Son_UNESCO_site_entrance,_Cham_Hindu_temples_complex,_Vietnam.jpg",
+        fallback: "https://commons.wikimedia.org/wiki/Special:FilePath/Sandstone_sculpture_displayed_at_the_Museum_of_Cham_Sculpture_without_a_label_I.JPG",
+        shortDesc: "Cách Đà Nẵng khoảng 70km và được UNESCO công nhận là Di sản Văn hóa Thế giới, Mỹ Sơn là quần thể đền tháp Chăm Pa cổ nằm giữa thung lũng xanh mát.",
+        story: "Thánh địa Mỹ Sơn nằm tại Quảng Nam, cách Đà Nẵng khoảng 70km và được UNESCO công nhận là Di sản Văn hóa Thế giới. Đây là quần thể đền tháp Chăm Pa cổ nằm giữa thung lũng xanh mát, mang đậm dấu ấn kiến trúc và tín ngưỡng Hindu giáo xưa.\n\nKhông chỉ nổi bật bởi vẻ đẹp cổ kính, nơi đây còn gây ấn tượng với kỹ thuật xây dựng bằng gạch nung vẫn còn nhiều bí ẩn đến nay. Mỹ Sơn là điểm tham quan lý tưởng cho chuyến đi trong ngày từ Đà Nẵng.",
+        tips: "Trên cung đường từ Thánh địa Mỹ Sơn trở về lại Đà Nẵng, bạn sẽ đi ngang qua Cầu Mống – nơi nổi tiếng với đặc sản Bê thui Cầu Mống da trong giòn trứ danh."
+      }
+    ];
+
+    /**
+     * DỮ LIỆU PHẦN 3: 14 MÓN ĐẶC SẢN TRỨ DANH CỦA ĐÀ NẴNG
+     * (Gắn đúng 14 hình ảnh thực tế chị Mỹ Trà gửi lên + Góc nhìn Đầu Bếp Chuyên Nghiệp)
+     */
+    const FOODS_DATA = [
+      {
+        id: "fd-mi-quang",
+        order: 1,
+        name: "Mì Quảng Đà Nẵng (Tôm Thịt, Cá Lóc, Gà Quê)",
+        taste: "Món Nước & Sợi Truyền Thống",
+        tag: "Linh hồn ẩm thực xứ Quảng – Đà",
+        localFile: "mì quảng.png",
+        primaryUrl: "https://cdn.tgdd.vn/Files/2021/08/31/1379184/cach-nau-mi-quang-phu-chiem-thom-ngon-chuan-vi-xu-quang-202202141327031321.jpg",
+        backupUrl: "https://mms.img.susercontent.com/vn-11134513-7r98o-lsvb2da3ofq188@resize_ss1242x600!@crop_w1242_h600_cT",
+        shortDesc: "Tô mì sứ trắng đầy đặn với sợi mì dẻo thơm, tôm đất rim đỏ au, thịt heo, trứng vàng ươm, bánh tráng giòn bẻ nhỏ, đậu phụng rang và rau cải non, búp chuối bào tươi mởn.",
+        story: "Khác với các món bún phở chan ngập nước dùng, Mì Quảng đúng điệu chỉ chan một lượng nước nhân (nước lèo) xâm xấp nhưng cực kỳ đậm đà từ xương hầm, tôm tươi, thịt ba chỉ hoặc gà quê, cá lóc. Màu vàng óng của dầu phụng khử củ nén thơm lừng cùng tiếng bẻ bánh tráng nướng giòn rụm tạo nên bản giao hưởng vị giác rất riêng.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Tô Mì Quảng đạt chuẩn phải hội tụ đủ sắc – hương – vị: màu đỏ cam bóng bẩy của tôm rim, sắc vàng của nghệ và trứng, màu xanh non của cải con, búp chuối thái rối cùng vị bùi của đậu phụng rang giã dập."
+      },
+      {
+        id: "fd-banh-trang-thit-heo",
+        order: 2,
+        name: "Bánh Tráng Cuốn Thịt Heo Hai Đầu Da",
+        taste: "Món Cuốn & Vị Biển Đà Nẵng",
+        tag: "Đặc sản trứ danh phải thử",
+        localFile: "Bánh tráng cuốn thịt heo.jpg",
+        primaryUrl: "https://cdn.eva.vn/upload/4-2018/images/2018-10-25/9-1540432716-906-width800height533.jpg",
+        backupUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A1nh_tr%C3%A1ng_cu%E1%BB%91n_th%E1%BB%8Bt_heo_(18521).jpg",
+        shortDesc: "Đĩa thịt heo luộc khéo giữ nguyên hai đầu da trong veo giòn ngọt xếp đều tăm tắp, dọn kèm đĩa bánh ướt trắng mịn và rổ rau sống xà lách, tía tô, hành chẻ, xoài xanh tươi rói.",
+        story: "Sự tinh tế của món ăn nằm ở lát thịt heo phần mông hoặc vai được luộc vừa chín tới và thái lát dài sao cho hai đầu đều có lớp mỡ trong và da giòn sần sật. Linh hồn quyết định độ ngon chính là chén mắm nêm cá cơm nguyên chất pha cùng thơm (dứa) băm nhuyễn, tỏi, ớt dậy mùi thơm nức.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Khi cuốn, trải lớp bánh tráng Đại Lộc dưới cùng, đặt lớp bánh ướt dẻo lên trên để giữ độ ẩm, xếp rau thơm, chuối chát, dưa leo và lát thịt heo hai đầu da rồi chấm đẫm vào chén mắm nêm."
+      },
+      {
+        id: "fd-bun-cha-ca",
+        order: 3,
+        name: "Bún Chả Cá Đà Nẵng",
+        taste: "Món Nước & Sợi Truyền Thống",
+        tag: "Thức quà sáng thân quen",
+        localFile: "bun_cha_ca_da_nang_.jpg",
+        primaryUrl: "https://simg.zalopay.com.vn/zlp-website/assets/bun_cha_ca_da_nang_07_45f8e34780.jpg",
+        backupUrl: "https://adormusic.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/07/24110819/Bu%CC%81n-cha%CC%89-ca%CC%81-109.jpeg",
+        shortDesc: "Tô bún nóng hổi với nước lèo màu đỏ cam thanh ngọt từ cà chua, bắp cải, măng tươi và bí đỏ, nổi bật với lát chả cá chiên vàng, chả cá hấp dai ngọt cùng hũ hành tím ngâm chua và đĩa chanh tươi.",
+        story: "Người Đà Nẵng đi xa về gần đều nhớ tô bún chả cá nóng hổi mỗi sớm mai. Chả cá Đà Nẵng được quết tay từ cá biển tươi đánh bắt trong ngày nên giữ được độ dai giòn và vị ngọt tự nhiên. Trên bàn ăn của quán bún chả cá Đà Nẵng lúc nào cũng có hũ hành tím ngâm giấm đường hồng hào và đĩa rau sống giá đỗ xanh tươi.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Nước dùng ninh hoàn toàn từ xương cá biển nên ngọt thanh không ngấy. Khi ăn nhớ nêm thêm một muỗng nhỏ mắm ruốc pha loãng và gắp vài lát hành tím ngâm chua giòn để kích thích vị giác."
+      },
+      {
+        id: "fd-banh-xeo-nem-lui",
+        order: 4,
+        name: "Bánh Xèo & Nem Lụi Miền Trung",
+        taste: "Món Cuốn & Vị Biển Đà Nẵng",
+        tag: "Vàng ươm giòn rụm & Nước lèo béo bùi",
+        localFile: "bánh xèo.jpg",
+        primaryUrl: "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwwoutifxc614b",
+        backupUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A1nh_x%C3%A8o_with_pork_sausage_and_shrimp_served_with_various_garnishes.jpg",
+        shortDesc: "Đĩa bánh xèo miền Trung vàng ươm gập đôi giòn rụm xếp trên đĩa sứ hoa văn xanh trắng, bên cạnh là đĩa nem lụi nướng xiên tre thơm phức, rổ rau sống tươi non và chén nước lèo đậu phụng.",
+        story: "Bánh xèo Đà Nẵng đúc bằng khuôn gang nhỏ vừa vặn, vỏ bánh giòn tan ôm lấy nhân tôm đất tươi ngọt, thịt ba chỉ và giá đỗ. Điểm đặc biệt nhất khiến ai ăn một lần cũng nhớ mãi là chén nước chấm ('nước lèo') sánh đặc nấu từ gan heo, thịt băm và đậu phụng xay nhuyễn nóng hổi.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Bánh xèo phải đúc trên lửa lớn với mỡ heo để viền bánh nổ giòn rụm, ăn nóng ngay khi vừa rời khuôn cùng xiên nem lụi nướng than hồng."
+      },
+      {
+        id: "fd-goi-ca-nam-o",
+        order: 5,
+        name: "Gỏi Cá Nam Ô",
+        taste: "Món Cuốn & Vị Biển Đà Nẵng",
+        tag: "Tinh hoa làng chài cổ dưới chân đèo Hải Vân",
+        localFile: "goi-ca-nam-o-da-nang.jpg",
+        primaryUrl: "https://statics.vinpearl.com/goi-ca-nam-o-12_1628680318.jpg",
+        backupUrl: "https://bazantravel.com/cdn/medias/uploads/85/85709-goi-ca-nam-o-da-nang-ba-hien-700x437.jpg",
+        shortDesc: "Đĩa cá trích tươi lọc xương áo lớp thính gạo rang vàng bùi đặt trên lá chuối xanh, bày cùng bánh tráng nướng, bánh tráng cuốn, rổ rau rừng phong phú và chén nước chấm đậu phụng mè rang.",
+        story: "Dưới chân đèo Hải Vân, làng cổ Nam Ô nổi tiếng hàng trăm năm với món Gỏi cá trích. Cá trích cỡ ngón tay vừa đánh bắt lúc bình minh được lọc xương, ép ráo với gừng, riềng, tỏi ớt rồi trộn thính gạo rang thơm lừng, ăn kèm các loại lá rừng chỉ có ở vùng núi Hải Vân – Sơn Trà.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Nước chấm gỏi cá Nam Ô được nấu từ chính nước cốt ép cá đun sôi cùng nước mắm Nam Ô cốt nhĩ, ớt tỏi, rắc thật nhiều đậu phụng giã và mè trắng."
+      },
+      {
+        id: "fd-che-xoa-xoa",
+        order: 6,
+        name: "Chè Xoa Xoa Hạt Lựu",
+        taste: "Quà Vặt Chợ Cồn & Đặc Sản Quà Tặng",
+        tag: "Thức quà giải nhiệt mát lành",
+        localFile: "Chè xoa xoa hạt lựu.jpg",
+        primaryUrl: "https://eholiday.vn/wp-content/uploads/2021/04/xoa-xoa-hat-luu-mon-che-quoc-dan-mat-lim-cho-ngay-he-2.jpg",
+        backupUrl: "https://danviet.ex-cdn.com/files/f1/296231569849192448/2022/3/4/am-thuc-da-nang-16464063706261680512719.jpg",
+        shortDesc: "Hai ly chè thủy tinh cao phân tầng đẹp mắt: lớp đậu xanh vàng mịn dưới đáy, hạt lựu đỏ cam giòn dai, thạch đen, rau câu xoa xoa xanh mát và lớp đá bào cốt dừa trắng ngần bên trên.",
+        story: "Chè xoa xoa hạt lựu là thức quà giải nhiệt gắn liền với tuổi thơ của mọi người con Đà Nẵng. Xoa xoa được nấu hoàn toàn thủ công từ rau câu rong biển tự nhiên vùng biển miền Trung nên mềm mượt, thanh mát, kết hợp cùng nhân đậu xanh đánh nhuyễn và nước cốt dừa béo ngậy.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Hạt lựu được làm từ bột năng áo màu củ dền tự nhiên nên vừa trong vừa giòn sần sật; khi khuấy đều cùng đá bào mịn và vài giọt dầu chuối thơm dịu sẽ mát lạnh tới tận tim."
+      },
+      {
+        id: "fd-oc-hut-cho-con",
+        order: 7,
+        name: "Ốc Hút Cay Xè Sả Ớt Kiểu Chợ Cồn",
+        taste: "Quà Vặt Chợ Cồn & Đặc Sản Quà Tặng",
+        tag: "Đặc sản ăn vặt trứ danh Chợ Cồn",
+        localFile: "oc-hut-da-nang.jpg",
+        primaryUrl: "https://serenebeachhoteldanang.com/wp-content/uploads/2023/04/foody-upload-api-foody-mobile-oc-200204143836-1024x512.jpg",
+        backupUrl: "https://s3-ap-southeast-1.amazonaws.com/cntatr-assets-ap-southeast-1-250226768838-55a62c9399d4d8a6/2023/05/cho-bac-my-an-5.png?tr=q-70,c-at_max,w-1000,h-600",
+        shortDesc: "Thau ốc gạo, ốc bươu nóng hổi xào ngập trong sả băm và ớt đỏ thái lát cay nồng thơm phức, múc ra đĩa kèm sợi đu đủ xanh bào giòn và nước ốc đậm đà.",
+        story: "Buổi chiều dạo quanh khu ẩm thực Chợ Cồn hay chợ Bắc Mỹ An, mùi sả ớt thơm nồng từ những chảo ốc hút lớn luôn làm thực khách không thể bước qua. Ốc được ngâm sạch, bấm đuôi rồi xào thấm gia vị để khi ăn chỉ cần đưa lên miệng hút nhẹ là thịt ốc cùng nước sốt cay ngọt tuôn ra.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Ốc phải xào lửa lớn cùng sả băm nhuyễn, ớt tương Đà Nẵng và một chút nước cốt dừa để nước ốc vừa cay xè đầu lưỡi vừa có hậu vị béo ngậy, ăn kèm đu đủ chua ngọt và bánh tráng nướng."
+      },
+      {
+        id: "fd-banh-canh-ruong",
+        order: 8,
+        name: "Bánh Canh Ruộng Cá Nục Nướng & Quẩy Giòn",
+        taste: "Món Nước & Sợi Truyền Thống",
+        tag: "Món ngon chiều phố biển",
+        localFile: "bánh canh ruộng.jpg",
+        primaryUrl: "https://kenh14cdn.com/203336854389633024/2022/6/7/photo-1-16545737410581913009522.jpg",
+        backupUrl: "https://mms.img.susercontent.com/vn-11134513-7r98o-lsv36w0humys58@resize_ss1242x600!@crop_w1242_h600_cT",
+        shortDesc: "Bàn tiệc bánh canh Đà Nẵng hấp dẫn với nước dùng vàng cam sánh ngọt, đầy ắp cá nục nướng gỡ thịt, tôm tươi, chả cá, giò heo, trứng cút và đĩa quẩy nóng giòn rụm.",
+        story: "Tên gọi 'Bánh canh ruộng' bắt nguồn từ những quán bánh canh bình dân xưa nằm sát cánh đồng ruộng ngoại ô Sơn Trà – Hải Châu. Sợi bánh canh bột gạo mềm dẻo hòa quyện trong nồi nước lèo ninh từ xương heo và cá biển, rắc thêm thịt cá nục nướng giã nhỏ thơm lừng mùi tiêu hành.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Cá nục tươi được nướng trên than hoa cho thơm lừng rồi gỡ lấy phần thịt nạc, xào săn với hành tím, nghệ và tiêu sọ trước khi cho vào tô bánh canh, chấm kèm chiếc quẩy giòn ngập trong nước lèo."
+      },
+      {
+        id: "fd-che-chuoi-nuong",
+        order: 9,
+        name: "Chè Chuối Nướng Nước Cốt Dừa Đậu Phụng",
+        taste: "Quà Vặt Chợ Cồn & Đặc Sản Quà Tặng",
+        tag: "Ngọt thơm béo bùi ấm lòng",
+        localFile: "Chè chuối nướng.png",
+        primaryUrl: "https://ticotravel.com.vn/wp-content/uploads/2022/11/che-chuoi-nuong-2.jpg",
+        backupUrl: "https://cdn.tgdd.vn/2021/04/CookProductThumb/CHUOI-NUONG-NUOC-COT-DUA-0-9-screenshot-620x620.jpg",
+        shortDesc: "Đĩa chuối bọc nếp nướng xém vàng thơm lừng, chan ngập nước cốt dừa nấu bột báng trắng sánh và phủ kín lớp đậu phụng rang giã dập béo bùi.",
+        story: "Những chiều Đà Nẵng se lạnh hay sau bữa ăn tối, thưởng thức một đĩa Chè chuối nướng ấm nóng là trải nghiệm khó quên. Trái chuối sứ chín mật được bọc lớp nếp dẻo trộn cốt dừa, gói lá chuối nướng trên than hồng cho đến khi vỏ nếp vàng giòn dậy mùi thơm.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Nước cốt dừa phải nấu nhỏ lửa cùng lá dứa, chút muối biển và hạt bột báng trong veo để tạo độ sánh mịn vừa phải, tôn lên vị ngọt dẻo của chuối nướng và độ giòn bùi của đậu phụng rang."
+      },
+      {
+        id: "fd-ca-nuc-hap-cuon",
+        order: 10,
+        name: "Cá Nục Hấp Cuốn Bánh Tráng Rau Muống Biển",
+        taste: "Món Cuốn & Vị Biển Đà Nẵng",
+        tag: "Mỹ vị mộc mạc của người Đà Nẵng",
+        localFile: "Cá nục hấp cuốn bánh tráng.jpg",
+        primaryUrl: "https://giadinh.mediacdn.vn/296230595582509056/2024/5/30/a-nuc-hap-cuon-banh-trang-rau-muong-da-nang-vua-de-thuc-hien-lai-cuc-ngon-mat-de-an-cho-mu-36n-1715488920-550-width780height1040-1717089561264-17170895613601135845063.jpg",
+        backupUrl: "https://down-vn.img.susercontent.com/file/vn-11134207-81ztc-mq7q7whry8si4e",
+        shortDesc: "Tô cá nục tươi xanh hấp chín tới cùng hành lá, hành tím và ớt xanh nguyên trái ngập trong nước cốt cá đậm đà, dọn kèm rổ rau muống cọng dài xanh mướt, bánh tráng và hai chén nước chấm.",
+        story: "Trong mâm cơm ngày hè của các gia đình Đà Nẵng cũng như tại các quán đặc sản địa phương, Cá nục hấp cuốn bánh tráng rau muống luôn là món ăn gây thương nhớ nhất. Cá nục suôn vừa đánh bắt từ biển Sơn Trà – Thọ Quang còn ánh xanh tươi rói, thịt săn chắc và ngọt lịm.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Cá nục được ướp chút mắm ngon, tiêu, hành củ và thật nhiều ớt xanh rồi đem hấp hoặc kho lạt để lấy phần nước cốt cá ngọt thanh. Cuốn cá cùng bánh tráng và đọt rau muống biển giòn rụm chấm nước cá hấp pha mắm ớt là ngon quên lối về."
+      },
+      {
+        id: "fd-chao-cho-nam-o",
+        order: 11,
+        name: "Cháo Chờ Nam Ô (Bánh Canh Cá Nục Nấu Chờ)",
+        taste: "Món Nước & Sợi Truyền Thống",
+        tag: "Nét độc đáo làng cổ Nam Ô",
+        localFile: "Cháo chờ Nam Ô.jpg",
+        primaryUrl: "https://mms.img.susercontent.com/vn-11134513-7r98o-lsv36w0humys58@resize_ss1242x600!@crop_w1242_h600_cT",
+        backupUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Banh-Canh-Noodle-Soup.jpg",
+        shortDesc: "Tô cháo bột (bánh canh bột gạo) nóng hổi sánh vàng với những khứa cá nục kho rim đậm đà, trứng cút, hành ngò xanh mướt, kế bên là khay cá nục rim đỏ au thơm phức.",
+        story: "Dưới chân đèo Hải Vân, người dân làng cổ Nam Ô có món 'Cháo chờ' độc nhất vô nhị. Gọi là Cháo chờ vì khi thực khách đến gọi món, chủ quán mới bắt đầu bắc nồi nước dùng nhỏ lên bếp, thả sợi bột gạo tươi và cá nục rim vào nấu chín. Khách ngồi chờ 5–7 phút trong hương thơm nghi ngút để thưởng thức tô cháo nóng bỏng tay.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Cá nục làm nhân Cháo chờ phải được kho rim thật thấm với nước mắm Nam Ô, ớt bột, tiêu và hành củ cho đến khi thịt cá săn cứng lại, tỏa màu nâu đỏ bóng bẩy hấp dẫn như chính bức hình thực tế của món ăn."
+      },
+      {
+        id: "fd-be-thui-cau-mong",
+        order: 12,
+        name: "Bê Thui Cầu Mống Da Trong Giòn & Mắm Cái Cá Cơm",
+        taste: "Món Cuốn & Vị Biển Đà Nẵng",
+        tag: "Đệ nhất danh ẩm Quảng – Đà",
+        localFile: "Bê thui cầu mống.jpg",
+        primaryUrl: "https://down-vn.img.susercontent.com/vn-11134259-7r98o-lwcxtffcklp5a3@resize_ss640x400",
+        backupUrl: "https://visitdanang.travel/VisitDaNang/POST/Th%C3%A1ng%2010-2025/11405/image-thumb__11405__720_jpg/1-be-thui-cau-mong-da-nang%20%282%29.fe73c1fc.jpg",
+        shortDesc: "Đĩa thịt bê thui thái mỏng hồng đào có lớp da vàng trong giòn sần sật rắc mè rang, điểm thêm lát chanh và ớt hiểm, dọn kèm đĩa bánh tráng mỏng, mâm rau sống chuối chát khế chua và chén mắm cái cá cơm.",
+        story: "Bê thui Cầu Mống là nghệ thuật ẩm thực trứ danh của vùng đất Quảng – Đà. Thịt bê tơ được thui nguyên con trên bếp than củi dâu bởi những người thợ lành nghề sao cho khi thái ra đạt đúng chuẩn 'hai tầng': phần thịt bên trong chín tới hồng hào ngọt mềm, phần da bên ngoài vàng trong suốt và giòn sần sật.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Bê thui Cầu Mống ngon nhất khi chấm cùng chén mắm cái thượng hạng làm từ cá cơm than hoặc cá nục ủ chín, pha thêm đường, tỏi ớt giã nhuyễn, gừng băm và vắt chút nước cốt chanh tươi."
+      },
+      {
+        id: "fd-cao-lau",
+        order: 13,
+        name: "Cao Lầu Thịt Xá Xíu Thấm Đẫm Hương Vị Giao Thoa",
+        taste: "Món Nước & Sợi Truyền Thống",
+        tag: "Tinh hoa ẩm thực di sản",
+        localFile: "Cao_Lau_-_Ba_Be,_Hoi_An.jpg",
+        primaryUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Cao_Lau_-_Ba_Be,_Hoi_An_Market_VND15000.jpg",
+        backupUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Cao_Lau_-_Ba_Be,_Hoi_An_Market_VND15000.jpg",
+        shortDesc: "Tô Cao lầu cận cảnh sắc nét với sợi mì vàng dai đặc trưng, những lát thịt xá xíu rim ngũ vị nâu óng mềm mọng, miếng tóp mỡ/bánh cao lầu chiên vuông giòn rụm và rau sống Trà Quế xanh tươi.",
+        story: "Trên hành trình khám phá Đà Nẵng – Hội An, Cao Lầu là món ăn mang đậm dấu ấn giao thoa văn hóa của thương cảng xưa. Sợi mì Cao lầu được chế biến kỳ công từ gạo quê ngâm nước tro củi tràm Cù Lao Chàm nên có màu vàng tự nhiên và độ dai giòn không lẫn vào đâu được.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Thịt heo đùi làm xá xíu phải được ướp ngũ vị hương, tỏi, nước tương rồi rim lửa nhỏ cho đến khi bên ngoài lên màu nâu cánh gián bóng đẹp, bên trong thớ thịt mềm mọng; dùng chính nước sốt rim thịt ấy rưới xâm xấp vào tô mì trộn đều."
+      },
+      {
+        id: "fd-cha-bo-banh-kho-me",
+        order: 14,
+        name: "Đặc Sản Quà Tặng: Chả Bò Đà Nẵng & Bánh Khô Mè Cẩm Lệ",
+        taste: "Quà Vặt Chợ Cồn & Đặc Sản Quà Tặng",
+        tag: "Thức quà biếu số 1 Đà Nẵng",
+        localFile: "Chả bò Đà Nẵng.png",
+        primaryUrl: "https://nguyenhafood.vn/uploads/files/cha-bo-quet-cau-tre-nguyen-ha-food%20%282%29.png",
+        backupUrl: "https://bqn.1cdn.vn/2024/04/03/441-202404031831276.jpg",
+        shortDesc: "Những đòn Chả bò Đà Nẵng gói lá chuối xanh mướt buộc lạt đỏ truyền thống, khi cắt đôi lộ rõ mặt chả màu hồng đỏ tự nhiên, mịn màng điểm xuyết những hạt tiêu đen thơm nồng giòn dai.",
+        story: "Mỗi chuyến du lịch Đà Nẵng khép lại, trong hành lý mang về biếu người thân của du khách luôn có đòn Chả bò Đà Nẵng và hộp Bánh khô mè Cẩm Lệ. Chả bò Đà Nẵng chính gốc được làm từ 100% thịt bò đùi tươi nóng vừa mổ sáng sớm, lọc hết gân, quết nhuyễn cùng nước mắm cốt, tỏi và tiêu sọ hạt nguyên.",
+        chefNote: "👨‍🍳 Bí quyết Đầu bếp: Nhìn vào mặt cắt đòn chả bò chuẩn Đà Nẵng sẽ thấy sắc hồng đỏ tự nhiên (không hàn sử dụng phẩm màu), có các lỗ khí nhỏ li ti và hạt tiêu đen nguyên hạt; khi cắn vào giòn dai sần sật, dậy mùi thơm của lá chuối hấp và thịt bò tươi."
+      }
+    ];
+
+    /**
+     * DỮ LIỆU PHẦN 4: CON NGƯỜI ĐÀ NẴNG
+     */
+    const PEOPLE_STORIES = [
+      {
+        id: "pp-1",
+        badge: "Lát cắt 01 • Sớm mai miền biển",
+        title: "Nụ Cười Hiền Hậu & Giọng Nói Mộc Mạc Bên Bờ Biển Mân Thái",
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80",
+        quote: "“Mua mớ cá nục tươi về hấp cuốn bánh tráng đi con, cá ghe mới vô bờ hồi sớm tinh mơ đó!”",
+        content: "Năm giờ sáng bên bờ biển Mân Thái – Thọ Quang, khi ánh bình minh vừa ửng hồng trên mặt biển, những chiếc thuyền thúng chở đầy cá nục, cá trích, mực tươi tấp nập cập bờ. Giữa tiếng sóng vỗ rì rào là tiếng trò chuyện rôm rả bằng chất giọng miền Trung đặc trưng đầy thương mến. Các cô, các bác ngư dân rám nắng với nụ cười hiền khô, luôn sẵn lòng chỉ cho khách phương xa cách chọn con cá tươi nhất với giá cả thật thà."
+      },
+      {
+        id: "pp-2",
+        badge: "Lát cắt 02 • Lòng hiếu khách",
+        title: "Sự Hào Sảng, Nghĩa Tình Với Người Lữ Khách Phương Xa",
+        image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80",
+        quote: "“Cứ đi thẳng đường ni tới ngã tư rồi quẹo phải nghe, để chú chạy xe dẫn đường một đoạn cho khỏi lạc!”",
+        content: "Ai từng đến Đà Nẵng hẳn đều có ít nhất một kỷ niệm ấm lòng về sự nhiệt tình của người dân nơi đây. Từ bác bảo vệ giữ xe tự tay lấy tấm bìa che nắng lên yên xe cho khách, cô bán ốc hút, chè xoa xoa bên chợ Cồn xởi lởi mời thêm chén nước chấm, cho đến những câu chuyện đẹp về lòng trung thực. Người Đà Nẵng trọng chữ tình, sống ngay thẳng và luôn mở rộng vòng tay đón bạn bốn phương."
+      },
+      {
+        id: "pp-3",
+        badge: "Lát cắt 03 • Nếp nhà ấm áp",
+        title: "Nhịp Sống Dung Hòa & Gia Đình Luôn Là Điểm Tựa Bình Yên",
+        image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80",
+        quote: "“Dù đi đâu xa, chiều về bên mâm cơm có tiếng cười ông bà, cha mẹ vẫn là điều hạnh phúc nhất.”",
+        content: "Giữa một đô thị phát triển nhanh chóng, người Đà Nẵng vẫn biết cách giữ cho mình những khoảng lặng quý giá bên gia đình. Buổi chiều sau giờ làm việc, các gia đình lại rủ nhau ra biển tắm mát, dạo bộ bên Công viên APEC – sông Hàn hay quây quần bên hiên nhà. Chính sự gắn kết bền chặt giữa các thế hệ trong gia đình đã làm nên linh hồn của một 'Thành phố đáng sống'."
+      }
+    ];
+
+    /**
+     * DỮ LIỆU PHẦN 5: 3 BÀI TẢN VĂN TRÊN BLOG CÁ NHÂN "NHỮNG ĐIỀU Ở LẠI"
+     */
+    const BLOG_POSTS = [
+      {
+        id: "blog-1",
+        date: "Tản văn Đà Nẵng • Ký ức & Hiện tại",
+        readTime: "4 phút đọc",
+        title: "Chiều Bên Bờ Sông Hàn – Nghe Gió Kể Chuyện Đà Nẵng Xưa Và Nay",
+        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dragon_Bridge_in_Da_Nang_(far).jpg",
+        excerpt: "Có những buổi chiều đứng bên mái vòm cánh diều Công viên APEC lộng gió, ngắm nhìn nhịp cầu Sông Hàn và cầu Rồng lên đèn, lòng bỗng bồi hồi nhớ về bao kỷ niệm êm đềm...",
+        fullText: [
+          "Có những buổi chiều đứng trên vỉa hè đường Bạch Đằng lộng gió, ngắm nhìn mặt nước sông Hàn lấp lánh ánh hoàng hôn chuyển dần sang sắc đèn lung linh của Cầu Rồng và Công viên APEC, lòng mình bỗng dịu lại một nỗi niềm rất đỗi thân thương.",
+          "Đà Nẵng trong ký ức của những ngày xưa cũ là những con đường nhỏ rợp bóng cây quanh Nhà thờ Con Gà, là tiếng gọi đò ngang mỗi sớm mai. Thành phố lớn lên từng ngày như một chàng trai trẻ tràn đầy sức sống, vươn vai nối nhịp đôi bờ bằng những cây cầu kỳ vĩ.",
+          "Thế nhưng điều kỳ diệu nhất là dù phố xá có khang trang, hiện đại đến đâu, chỉ cần lắng nghe một câu hỏi thăm 'Đi mô rứa?' ấm áp bên quán cóc ven đường, ta vẫn nhận ra một Đà Nẵng nguyên vẹn nghĩa tình. Phố đổi thay để đẹp hơn, còn tình đất, tình người thì vẫn ở lại vẹn nguyên trong tim."
+        ]
+      },
+      {
+        id: "blog-2",
+        date: "Góc Nhỏ Gia Đình • Ẩm Thực Quê Nhà",
+        readTime: "5 phút đọc",
+        title: "Hương Vị Quà Quê Đà Nẵng Và Những Bữa Cơm Sum Vầy",
+        image: "https://cdn.tgdd.vn/Files/2021/08/31/1379184/cach-nau-mi-quang-phu-chiem-thom-ngon-chuan-vi-xu-quang-202202141327031321.jpg",
+        excerpt: "Từ tô Mì Quảng tôm thịt, nồi Cá nục hấp cuốn rau muống đến tô Cháo chờ Nam Ô nóng hổi – mỗi món ngon Đà Nẵng đều gói trọn hương vị sum vầy của gia đình...",
+        fullText: [
+          "Với người Đà Nẵng và xứ Quảng, ẩm thực không đơn thuần là chuyện ăn uống, mà là sợi dây gắn kết ký ức gia đình qua bao thế hệ. Đó là sáng cuối tuần cả nhà quây quần bên tô Mì Quảng tôm thịt vàng ươm hay tô Bún chả cá thơm lừng.",
+          "Đó còn là buổi trưa hè mẹ mua mớ cá nục tươi xanh vừa cập bến về hấp cùng hành lá và ớt xanh, cả nhà trải bánh tráng cuốn cùng rau muống giòn rụm; hay buổi chiều mưa ghé chợ Cồn xuýt xoa đĩa ốc hút cay xè, chén chè chuối nướng cốt dừa béo bùi.",
+          "Đi qua bao miền đất mới, thưởng thức bao món ngon vật lạ, cuối cùng thứ làm người ta cay mắt nhớ về vẫn là hương vị món ăn quê nhà và tiếng cười nói ấm áp bên hiên nhà có bóng dáng người thân."
+        ]
+      },
+      {
+        id: "blog-3",
+        date: "Tâm Tình • Những Điều Ở Lại ♡",
+        readTime: "5 phút đọc",
+        title: "Nhà Là Nơi Có Yêu Thương – Có Những Yêu Thương Năm Tháng Chẳng Thể Mang Đi",
+        image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80",
+        excerpt: "Thời gian có thể làm mái tóc ông bà điểm thêm sợi bạc, làm những đứa trẻ ngày nào lớn khôn, nhưng tình yêu thương nơi hiên nhà bình yên thì mãi mãi ở lại...",
+        fullText: [
+          "Khi lập nên trang Fanpage 'Những điều Ở lại', mình đã chọn bức ảnh hiên nhà lúc hoàng hôn làm ảnh bìa – nơi có tấm biển gỗ mộc mạc khắc dòng chữ 'Nhà là nơi có yêu thương ♡', có ông bà ngồi bên thềm hoa ngắm nhìn con cháu dắt tay nhau trở về dưới ánh nắng chiều dịu ngọt.",
+          "Cuộc sống ngoài kia đôi lúc vội vã và nhiều bộn bề. Năm tháng trôi đi mang theo biết bao đổi thay của phố phường, của tuổi trẻ. Nhưng sau tất cả, những gì chân thành nhất – một lời dặn dò của mẹ, ánh mắt hiền từ của cha, cái nắm tay ấm áp của người bạn đời và tiếng cười trong trẻo của con trẻ – sẽ luôn là 'Những điều Ở lại'.",
+          "Cảm ơn bạn đã ghé thăm góc nhỏ này. Mời bạn cùng kết nối với mình trên Fanpage 'Những điều Ở lại' để chúng ta cùng viết tiếp và sẻ chia những câu chuyện đẹp đẽ, bình yên của cuộc đời nhé!"
+        ]
+      }
+    ];
+
+    /**
+     * TIỆN ÍCH CHUẨN HÓA TIẾNG VIỆT & LƯU YÊU THÍCH
+     */
+    function normalizeVi(str) {
+      if (!str) return "";
+      return str
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .trim();
+    }
+
+    function getFavorites() {
+      try {
+        const raw = localStorage.getItem(SITE_CONFIG.storageKey);
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveFavorites(list) {
+      try {
+        localStorage.setItem(SITE_CONFIG.storageKey, JSON.stringify(list));
+      } catch (e) {}
+      updateFavoriteBadge();
+    }
+
+    function isFavorite(itemId) {
+      return getFavorites().includes(itemId);
+    }
+
+    function toggleFavorite(itemId, itemName) {
+      const current = getFavorites();
+      const idx = current.indexOf(itemId);
+      let added = false;
+      if (idx > -1) {
+        current.splice(idx, 1);
+      } else {
+        current.push(itemId);
+        added = true;
+      }
+      saveFavorites(current);
+      renderLandmarks();
+      renderFoods();
+      showToast(
+        added
+          ? `Đã lưu "${itemName}" vào Sổ tay Yêu thích ♡`
+          : `Đã bỏ "${itemName}" khỏi danh sách đã lưu`,
+        added ? "success" : "info"
+      );
+    }
+
+    function updateFavoriteBadge() {
+      const badge = document.getElementById("fav-count-badge");
+      if (badge) badge.textContent = getFavorites().length;
+    }
+
+    function showToast(message, type = "success") {
+      const container = document.getElementById("toast-container");
+      if (!container) return;
+      const toast = document.createElement("div");
+      const bgClass =
+        type === "success"
+          ? "bg-ocean text-white border-sontra"
+          : "bg-slate-800 text-white border-slate-600";
+      toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl shadow-xl border ${bgClass} text-xs sm:text-sm font-medium transition-all duration-300`;
+      toast.innerHTML = `
+        <i class="fa-solid ${type === "success" ? "fa-circle-check text-emerald-400" : "fa-circle-info text-amber-300"}"></i>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-x-4");
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    /**
+     * LẤY ĐƯỜNG DẪN ẢNH THỰC TẾ CHO TỪNG MÓN ĂN (ĐẢM BẢO HIỂN THỊ 100% TRỰC TIẾP & GITHUB PAGES)
+     */
+    function getFoodImageSrc(item) {
+      if (CUSTOM_FOOD_IMAGES[item.id]) {
+        return CUSTOM_FOOD_IMAGES[item.id];
+      }
+      return item.primaryUrl;
+    }
+
+    function getChefFilterClass() {
+      if (currentChefFilterMode === "super") return "chef-filter-super";
+      if (currentChefFilterMode === "original") return "chef-filter-original";
+      return "chef-filter-hdr";
+    }
+
+    function setChefFilterMode(mode) {
+      currentChefFilterMode = mode;
+      const modes = ["hdr", "super", "original"];
+      modes.forEach((m) => {
+        const btn = document.getElementById(`filter-mode-${m}`);
+        if (!btn) return;
+        if (m === mode) {
+          btn.className = "px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-400 text-slate-950 shadow transition";
+        } else {
+          btn.className = "px-3.5 py-2 rounded-xl text-xs font-semibold bg-white/15 hover:bg-white/25 text-white transition";
+        }
+      });
+      renderFoods();
+      const modeNames = {
+        hdr: "Chuẩn Đầu Bếp HDR (Sắc nét & Tươi màu ẩm thực)",
+        super: "Siêu Nét Khử Mờ Tối Đa (Unsharp Mask 3x3)",
+        original: "Ảnh Gốc Nguyên Bản"
+      };
+      showToast(`Đã chuyển sang chế độ: ${modeNames[mode]}`, "success");
+    }
+
+    /**
+     * XỬ LÝ LÀM NÉT ẢNH BẰNG CANVAS UNSHARP MASK KHI NẠP TỪ MÁY TÍNH
+     */
+    function enhanceFoodImageCanvas(file, callback) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = new Image();
+        img.onload = function () {
+          const canvas = document.createElement("canvas");
+          // Nâng kích thước chuẩn HD nếu ảnh gốc quá nhỏ (ví dụ bánh xèo, chè xoa xoa, cháo chờ)
+          const targetWidth = Math.max(img.width, 900);
+          const scale = targetWidth / img.width;
+          const targetHeight = Math.round(img.height * scale);
+
+          canvas.width = Math.min(targetWidth, 1280);
+          canvas.height = Math.min(targetHeight, 960);
+
+          const ctx = canvas.getContext("2d");
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = "high";
+          ctx.filter = "contrast(1.08) saturate(1.18) brightness(1.03)";
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+          const dataUrl = canvas.toDataURL("image/jpeg", 0.90);
+          callback(dataUrl);
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function uploadSingleFoodImage(foodId, fileInput) {
+      if (!fileInput.files || !fileInput.files[0]) return;
+      const file = fileInput.files[0];
+      const item = FOODS_DATA.find((x) => x.id === foodId);
+      enhanceFoodImageCanvas(file, (dataUrl) => {
+        CUSTOM_FOOD_IMAGES[foodId] = dataUrl;
+        try {
+          localStorage.setItem(SITE_CONFIG.customImgStorageKey, JSON.stringify(CUSTOM_FOOD_IMAGES));
+        } catch (err) {}
+        renderFoods();
+        renderStudioFoodsList();
+        showToast(`Đã nạp & làm nét HD ảnh món "${item ? item.name : foodId}"!`, "success");
+      });
+    }
+
+    function handleBatchFoodUpload(files) {
+      if (!files || files.length === 0) return;
+      let matchedCount = 0;
+      Array.from(files).forEach((file) => {
+        const normFile = normalizeVi(file.name);
+        // Tìm món khớp tên file
+        const matchedFood = FOODS_DATA.find((item) => {
+          const normLocal = normalizeVi(item.localFile.replace(/\..+$/, ""));
+          const normName = normalizeVi(item.name);
+          return normFile.includes(normLocal) || normLocal.includes(normFile.replace(/\..+$/, "")) || normName.includes(normFile.replace(/\..+$/, ""));
+        });
+
+        if (matchedFood) {
+          matchedCount++;
+          enhanceFoodImageCanvas(file, (dataUrl) => {
+            CUSTOM_FOOD_IMAGES[matchedFood.id] = dataUrl;
+            try {
+              localStorage.setItem(SITE_CONFIG.customImgStorageKey, JSON.stringify(CUSTOM_FOOD_IMAGES));
+            } catch (err) {}
+            renderFoods();
+            renderStudioFoodsList();
+          });
+        }
+      });
+
+      if (matchedCount > 0) {
+        showToast(`Đã tự động nhận diện và làm nét HD ${matchedCount} ảnh món ăn của chị!`, "success");
+      } else {
+        showToast("Hãy chọn từng món bên dưới nếu tên file ảnh khác tên mặc định nhé!", "info");
+      }
+    }
+
+    function resetAllCustomFoodImages() {
+      CUSTOM_FOOD_IMAGES = {};
+      try {
+        localStorage.removeItem(SITE_CONFIG.customImgStorageKey);
+      } catch (e) {}
+      renderFoods();
+      renderStudioFoodsList();
+      showToast("Đã khôi phục bộ 14 ảnh thực tế mặc định!", "info");
+    }
+
+    function openPhotoStudioModal() {
+      renderStudioFoodsList();
+      const modal = document.getElementById("photo-studio-modal");
+      if (!modal) return;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closePhotoStudioModal() {
+      const modal = document.getElementById("photo-studio-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function renderStudioFoodsList() {
+      const list = document.getElementById("studio-foods-list");
+      if (!list) return;
+      list.innerHTML = FOODS_DATA.map((item) => {
+        const hasCustom = Boolean(CUSTOM_FOOD_IMAGES[item.id]);
+        const src = getFoodImageSrc(item);
+        return `
+          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <img
+                src="${src}"
+                alt="${item.name}"
+                onerror="this.onerror=null;this.src='${item.backupUrl}';"
+                class="w-16 h-16 rounded-xl object-cover shrink-0 border border-amber-300 ${getChefFilterClass()}"
+              />
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-amber-100 text-amber-900">#${item.order}</span>
+                  <h4 class="font-bold text-slate-800 text-xs sm:text-sm truncate">${item.name}</h4>
+                </div>
+                <p class="text-[11px] text-slate-500 font-mono truncate mt-0.5">File gốc: ${item.localFile}</p>
+                <span class="inline-block mt-1 text-[10px] font-semibold ${hasCustom ? "text-emerald-700" : "text-ocean"}">
+                  ${hasCustom ? "✓ Đã nhúng ảnh HD từ máy" : "✓ Đang hiển thị ảnh thực tế chuẩn"}
+                </span>
+              </div>
+            </div>
+            <label class="cursor-pointer px-3 py-2 rounded-xl bg-white hover:bg-amber-50 border border-slate-300 text-slate-700 text-xs font-semibold shrink-0 transition">
+              <i class="fa-solid fa-upload mr-1 text-sunset"></i> Đổi ảnh
+              <input type="file" accept="image/*" class="hidden" onchange="uploadSingleFoodImage('${item.id}', this)" />
+            </label>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function exportSelfContainedHtml() {
+      let htmlSource = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const customJson = JSON.stringify(CUSTOM_FOOD_IMAGES);
+      htmlSource = htmlSource.replace(
+        "let CUSTOM_FOOD_IMAGES = {};",
+        `let CUSTOM_FOOD_IMAGES = ${customJson};`
+      );
+      const blob = new Blob([htmlSource], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "index.html";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("Đã xuất file index.html hoàn chỉnh 100% về máy của chị!", "success");
+    }
+
+    /**
+     * KHỞI TẠO PHẦN 1: THANH KÉO XƯA & NAY
+     */
+    function initComparisonSlider() {
+      const box = document.getElementById("comparison-box");
+      const beforeLayer = document.getElementById("comparison-before-layer");
+      const beforeImg = document.getElementById("comparison-before-img");
+      const handle = document.getElementById("comparison-handle");
+      const rangeInput = document.getElementById("comparison-range");
+      if (!box || !beforeLayer || !beforeImg || !handle || !rangeInput) return;
+
+      function syncBeforeImageWidth() {
+        beforeImg.style.width = `${box.offsetWidth}px`;
+      }
+      function setSliderPercentage(percent) {
+        const clamped = Math.max(5, Math.min(95, percent));
+        beforeLayer.style.width = `${clamped}%`;
+        handle.style.left = `${clamped}%`;
+        rangeInput.value = Math.round(clamped);
+      }
+      syncBeforeImageWidth();
+      window.addEventListener("resize", syncBeforeImageWidth);
+
+      let isDragging = false;
+      function moveHandler(clientX) {
+        const rect = box.getBoundingClientRect();
+        const pct = ((clientX - rect.left) / rect.width) * 100;
+        setSliderPercentage(pct);
+      }
+      box.addEventListener("mousedown", (e) => { isDragging = true; moveHandler(e.clientX); });
+      window.addEventListener("mousemove", (e) => { if (isDragging) moveHandler(e.clientX); });
+      window.addEventListener("mouseup", () => { isDragging = false; });
+      box.addEventListener("touchstart", (e) => { isDragging = true; if (e.touches[0]) moveHandler(e.touches[0].clientX); }, { passive: true });
+      box.addEventListener("touchmove", (e) => { if (isDragging && e.touches[0]) moveHandler(e.touches[0].clientX); }, { passive: true });
+      box.addEventListener("touchend", () => { isDragging = false; });
+      rangeInput.addEventListener("input", (e) => setSliderPercentage(parseFloat(e.target.value)));
+    }
+
+    function renderEraPanel(eraKey = "xua") {
+      const panel = document.getElementById("era-content-panel");
+      if (!panel) return;
+      const data = ERA_DATA[eraKey] || ERA_DATA.xua;
+      panel.innerHTML = `
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900">
+          ${data.badge}
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-ocean leading-snug">
+          ${data.title}
+        </h3>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          ${data.summary}
+        </p>
+        <ul class="space-y-2.5 pt-1">
+          ${data.bullets.map((b) => `
+            <li class="flex items-start gap-2.5 text-sm text-slate-700">
+              <i class="fa-solid fa-circle-check text-sontra mt-1 shrink-0"></i>
+              <span>${b}</span>
+            </li>
+          `).join("")}
+        </ul>
+        <blockquote class="p-4 rounded-2xl bg-nostalgia border-l-4 border-sunset font-serif italic text-sm sm:text-base text-amber-950">
+          ${data.quote}
+        </blockquote>
+      `;
+    }
+
+    function renderMilestones() {
+      const grid = document.getElementById("milestones-grid");
+      if (!grid) return;
+      grid.innerHTML = MILESTONES_DATA.map((m) => `
+        <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-magazine border border-slate-200/80 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-sontra bg-sontra/10 px-3 py-1 rounded-full">
+                ${m.era}
+              </span>
+              <div class="w-10 h-10 rounded-xl bg-ocean/10 text-ocean flex items-center justify-center">
+                <i class="fa-solid ${m.icon}"></i>
+              </div>
+            </div>
+            <h4 class="font-serif font-bold text-lg text-ocean mb-3">${m.title}</h4>
+            <div class="space-y-3 text-xs sm:text-sm">
+              <div class="p-3 rounded-2xl bg-amber-50/90 border border-amber-200/60">
+                <span class="font-bold text-amber-900 block mb-0.5">📜 Ngày xưa:</span>
+                <p class="text-slate-700 leading-relaxed">${m.xua}</p>
+              </div>
+              <div class="p-3 rounded-2xl bg-cyan-50/70 border border-cyan-200/60">
+                <span class="font-bold text-ocean block mb-0.5">✨ Ngày nay:</span>
+                <p class="text-slate-700 leading-relaxed">${m.nay}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    /**
+     * HIỂN THỊ PHẦN 2: 12 DANH THẮNG ĐẸP + NÚT HỘP THOẠI BẢN ĐỒ MAPS
+     */
+    let activeLandmarkCategory = "all";
+    let landmarkSearchQuery = "";
+
+    function renderLandmarks() {
+      const grid = document.getElementById("landmarks-grid");
+      if (!grid) return;
+
+      const q = normalizeVi(landmarkSearchQuery);
+      const filtered = LANDMARKS_DATA.filter((item) => {
+        const matchCat = activeLandmarkCategory === "all" || item.category === activeLandmarkCategory;
+        const matchQuery =
+          !q ||
+          normalizeVi(item.name).includes(q) ||
+          normalizeVi(item.shortDesc).includes(q) ||
+          normalizeVi(item.location).includes(q);
+        return matchCat && matchQuery;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center bg-slate-50 rounded-3xl border border-dashed border-slate-300">
+            <i class="fa-solid fa-compass text-3xl text-slate-400 mb-2"></i>
+            <p class="text-slate-700 font-semibold">Không tìm thấy danh thắng phù hợp với từ khóa "${landmarkSearchQuery}".</p>
+            <button type="button" onclick="resetLandmarkFilter()" class="mt-3 px-4 py-2 rounded-xl bg-ocean text-white text-xs font-semibold">
+              Hiển thị lại tất cả 13 danh thắng
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map((item) => {
+        const fav = isFavorite(item.id);
+        return `
+          <article class="group bg-nostalgia rounded-3xl overflow-hidden border border-slate-200/85 shadow-sm hover:shadow-magazine transition duration-300 flex flex-col">
+            <div class="relative h-60 overflow-hidden bg-slate-800">
+              <img
+                src="${item.image}"
+                alt="${item.name}"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='${item.fallback}';"
+                class="w-full h-full object-cover object-center card-zoom-img"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+              <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-ocean/90 text-amber-300 backdrop-blur-sm shadow border border-amber-300/30">
+                ${item.badge}
+              </span>
+              <button
+                type="button"
+                onclick="toggleFavorite('${item.id}', '${item.name.replace(/'/g, "\\'")}')"
+                class="absolute top-3.5 right-3.5 w-9 h-9 rounded-full ${
+                  fav ? "bg-rose-500 text-white" : "bg-white/90 text-slate-700 hover:text-rose-500"
+                } flex items-center justify-center shadow transition"
+                title="Lưu vào sổ tay yêu thích"
+              >
+                <i class="fa-solid fa-heart text-sm"></i>
+              </button>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <span class="text-[11px] font-semibold uppercase tracking-wider text-emerald-300 block">${item.category}</span>
+                <h3 class="font-serif font-bold text-xl leading-snug">${item.name}</h3>
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+                  ${item.shortDesc}
+                </p>
+                <div class="mt-3 flex items-center gap-1.5 text-xs text-emerald-800 font-medium">
+                  <i class="fa-solid fa-location-dot text-emerald-600 shrink-0"></i>
+                  <span class="truncate">${item.location}</span>
+                </div>
+              </div>
+
+              <!-- CỤM 2 NÚT SONG SONG: KHÁM PHÁ CHI TIẾT & BẢN ĐỒ MAPS MÀU SẮC ẤN TƯỢNG -->
+              <div class="pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2.5">
+                <button
+                  type="button"
+                  onclick="openDetailModal('landmark', '${item.id}')"
+                  class="px-3 py-2.5 rounded-xl bg-ocean hover:bg-ocean-dark text-white text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <i class="fa-solid fa-book-open"></i>
+                  <span>Khám phá chi tiết</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="openLandmarkMapModal('${item.id}')"
+                  class="btn-map-glow px-3 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-500 hover:from-emerald-700 hover:to-amber-600 text-white text-xs sm:text-sm font-bold transition flex items-center justify-center gap-1.5 shadow-md"
+                >
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <span>Bản đồ Maps</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function resetLandmarkFilter() {
+      activeLandmarkCategory = "all";
+      landmarkSearchQuery = "";
+      const input = document.getElementById("landmark-search");
+      if (input) input.value = "";
+      updateLandmarkFilterButtons();
+      renderLandmarks();
+    }
+
+    function updateLandmarkFilterButtons() {
+      document.querySelectorAll(".landmark-filter-btn").forEach((btn) => {
+        if (btn.dataset.category === activeLandmarkCategory) {
+          btn.className = "landmark-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-ocean text-white shadow-sm transition";
+        } else {
+          btn.className = "landmark-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-ocean/10 hover:text-ocean transition";
+        }
+      });
+    }
+
+    function openLandmarkMapModal(landmarkId) {
+      const item = LANDMARKS_DATA.find((x) => x.id === landmarkId);
+      if (!item) return;
+      document.getElementById("map-modal-title").textContent = item.name;
+      document.getElementById("map-modal-address").textContent = item.location;
+      document.getElementById("map-modal-distance").textContent = item.distance;
+      document.getElementById("map-modal-coords").textContent = item.coords;
+      document.getElementById("map-modal-note").innerHTML = `<i class="fa-regular fa-clock mr-1"></i><strong>Thời điểm lý tưởng:</strong> ${item.bestTime}`;
+      document.getElementById("map-modal-iframe").src = `https://www.google.com/maps?q=${item.mapQuery}&output=embed`;
+      document.getElementById("map-modal-external").href = `https://www.google.com/maps/search/?api=1&query=${item.mapQuery}`;
+
+      const modal = document.getElementById("map-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeMapModal() {
+      const modal = document.getElementById("map-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      const iframe = document.getElementById("map-modal-iframe");
+      if (iframe) iframe.src = "";
+    }
+
+    /**
+     * HIỂN THỊ PHẦN 3: 14 MÓN ĐẶC SẢN TRỨ DANH (ẢNH THỰC TẾ + BỘ LỌC CHEF HDR)
+     */
+    let activeFoodTaste = "all";
+    let foodSearchQuery = "";
+
+    function renderFoods() {
+      const grid = document.getElementById("foods-grid");
+      if (!grid) return;
+
+      const q = normalizeVi(foodSearchQuery);
+      const filtered = FOODS_DATA.filter((item) => {
+        const matchTaste = activeFoodTaste === "all" || item.taste === activeFoodTaste;
+        const matchQuery =
+          !q ||
+          normalizeVi(item.name).includes(q) ||
+          normalizeVi(item.shortDesc).includes(q) ||
+          normalizeVi(item.tag).includes(q) ||
+          normalizeVi(item.chefNote).includes(q);
+        return matchTaste && matchQuery;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center bg-white rounded-3xl border border-dashed border-amber-300">
+            <i class="fa-solid fa-bowl-rice text-3xl text-sunset mb-2"></i>
+            <p class="text-slate-700 font-semibold">Không tìm thấy món đặc sản phù hợp với "${foodSearchQuery}".</p>
+            <button type="button" onclick="resetFoodFilter()" class="mt-3 px-4 py-2 rounded-xl bg-sunset text-white text-xs font-semibold">
+              Xem tất cả 14 món đặc sản Đà Nẵng
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      const filterClass = getChefFilterClass();
+
+      grid.innerHTML = filtered.map((item) => {
+        const fav = isFavorite(item.id);
+        const imgSrc = getFoodImageSrc(item);
+        return `
+          <article class="group bg-white rounded-3xl overflow-hidden border border-amber-200/80 shadow-sm hover:shadow-warm transition duration-300 flex flex-col">
+            <div class="food-img-frame h-64 relative">
+              <img
+                src="${imgSrc}"
+                alt="${item.name}"
+                loading="lazy"
+                onerror="if(!this.dataset.triedLocal){this.dataset.triedLocal='1';this.src='./${encodeURIComponent(item.localFile)}';}else{this.onerror=null;this.src='${item.backupUrl}';}"
+                class="w-full h-full object-cover object-center card-zoom-img ${filterClass}"
+              />
+              <span class="absolute top-3.5 left-3.5 z-10 px-3 py-1 rounded-full text-xs font-bold bg-amber-600/95 text-white shadow backdrop-blur-sm">
+                #${item.order} • ${item.taste}
+              </span>
+              <button
+                type="button"
+                onclick="toggleFavorite('${item.id}', '${item.name.replace(/'/g, "\\'")}')"
+                class="absolute top-3.5 right-3.5 z-10 w-9 h-9 rounded-full ${
+                  fav ? "bg-rose-500 text-white" : "bg-white/90 text-slate-700 hover:text-rose-500"
+                } flex items-center justify-center shadow transition"
+                title="Lưu món ngon này"
+              >
+                <i class="fa-solid fa-heart text-sm"></i>
+              </button>
+              <div class="absolute bottom-3 left-4 right-4 z-10 flex items-center justify-between gap-2">
+                <span class="text-amber-200 text-xs font-semibold flex items-center gap-1.5 drop-shadow">
+                  <i class="fa-solid fa-star text-amber-400"></i>
+                  <span>${item.tag}</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2.5">
+                <h3 class="font-serif font-bold text-xl text-ocean group-hover:text-sunset transition leading-snug">
+                  ${item.name}
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  ${item.shortDesc}
+                </p>
+                <div class="p-3.5 rounded-2xl bg-amber-50/90 border border-amber-200/80 text-xs text-amber-950 leading-relaxed">
+                  ${item.chefNote}
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-slate-100 flex items-center justify-end">
+                <button
+                  type="button"
+                  onclick="openDetailModal('food', '${item.id}')"
+                  class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-sunset to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-xs sm:text-sm font-bold transition shadow-sm flex items-center justify-center gap-2"
+                >
+                  <i class="fa-solid fa-utensils"></i>
+                  <span>Khám phá hương vị &amp; Cách thưởng thức</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function resetFoodFilter() {
+      activeFoodTaste = "all";
+      foodSearchQuery = "";
+      const input = document.getElementById("food-search");
+      if (input) input.value = "";
+      updateFoodFilterButtons();
+      renderFoods();
+    }
+
+    function updateFoodFilterButtons() {
+      document.querySelectorAll(".food-filter-btn").forEach((btn) => {
+        if (btn.dataset.taste === activeFoodTaste) {
+          btn.className = "food-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-sunset text-white shadow-sm transition";
+        } else {
+          btn.className = "food-filter-btn px-5 py-2.5 rounded-2xl text-sm font-semibold bg-white text-slate-700 hover:bg-sunset/10 hover:text-sunset-deep transition";
+        }
+      });
+    }
+
+    /**
+     * HIỂN THỊ PHẦN 4 & 5: CON NGƯỜI ĐÀ NẴNG & BLOG "NHỮNG ĐIỀU Ở LẠI"
+     */
+    function renderPeopleStories() {
+      const grid = document.getElementById("people-stories-grid");
+      if (!grid) return;
+      grid.innerHTML = PEOPLE_STORIES.map((story) => `
+        <article class="bg-nostalgia rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-magazine transition flex flex-col">
+          <div class="h-56 overflow-hidden relative">
+            <img
+              src="${story.image}"
+              alt="${story.title}"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x500/0A4D68/FFFFFF?text=Con+Nguoi+Da+Nang';"
+              class="w-full h-full object-cover object-center"
+            />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-ocean/90 text-white backdrop-blur-sm">
+              ${story.badge}
+            </span>
+          </div>
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <h3 class="font-serif font-bold text-xl text-ocean leading-snug">
+                ${story.title}
+              </h3>
+              <blockquote class="p-3.5 rounded-2xl bg-amber-50 border-l-4 border-sunset font-serif italic text-xs sm:text-sm text-amber-950">
+                ${story.quote}
+              </blockquote>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                ${story.content}
+              </p>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderBlogPosts() {
+      const grid = document.getElementById("blog-posts-grid");
+      if (!grid) return;
+      grid.innerHTML = BLOG_POSTS.map((post) => `
+        <article class="group bg-white rounded-3xl overflow-hidden border border-amber-200/90 shadow-md hover:shadow-warm transition flex flex-col">
+          <div class="relative h-52 overflow-hidden">
+            <img
+              src="${post.image}"
+              alt="${post.title}"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x500/D97706/FFFFFF?text=Nhung+Dieu+O+Lai';"
+              class="w-full h-full object-cover object-center card-zoom-img"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-amber-950/60 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-semibold text-amber-100">
+              <i class="fa-regular fa-calendar-check mr-1"></i> ${post.date}
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h4 class="font-serif font-bold text-xl text-amber-950 group-hover:text-sunset transition leading-snug">
+                ${post.title}
+              </h4>
+              <p class="mt-2.5 text-slate-600 text-sm leading-relaxed">
+                ${post.excerpt}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-amber-100 flex items-center justify-between">
+              <span class="text-xs text-slate-400">
+                <i class="fa-regular fa-clock mr-1"></i> ${post.readTime}
+              </span>
+              <button
+                type="button"
+                onclick="openDetailModal('blog', '${post.id}')"
+                class="px-4 py-2 rounded-xl bg-amber-100 hover:bg-sunset text-amber-950 hover:text-white text-xs font-bold transition flex items-center gap-1.5"
+              >
+                <span>Đọc toàn văn</span>
+                <i class="fa-solid fa-book-open"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    /**
+     * MODAL CHI TIẾT ĐA NĂNG (DANH THẮNG / ĐẶC SẢN / TẢN VĂN BLOG)
+     */
+    function openDetailModal(type, id) {
+      const modal = document.getElementById("detail-modal");
+      const body = document.getElementById("detail-modal-body");
+      if (!modal || !body) return;
+
+      if (type === "landmark") {
+        const item = LANDMARKS_DATA.find((x) => x.id === id);
+        if (!item) return;
+        const fav = isFavorite(item.id);
+        body.innerHTML = `
+          <div class="relative h-72 sm:h-80 bg-slate-900">
+            <img src="${item.image}" alt="${item.name}" onerror="this.onerror=null;this.src='${item.fallback}';" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-sontra text-white">${item.category}</span>
+              <h3 class="mt-2 text-2xl sm:text-4xl font-serif font-bold">${item.name}</h3>
+              <p class="text-xs sm:text-sm text-slate-200 mt-1"><i class="fa-solid fa-location-dot text-amber-300 mr-1.5"></i>${item.location}</p>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 space-y-5">
+            <div class="p-4 rounded-2xl bg-ocean/5 border border-ocean/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="text-xs sm:text-sm text-ocean">
+                <strong>⏰ Thời điểm ngắm cảnh đẹp nhất:</strong> ${item.bestTime}
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button
+                  type="button"
+                  onclick="closeDetailModal(); openLandmarkMapModal('${item.id}');"
+                  class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow"
+                >
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <span>Mở Bản đồ Maps</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="toggleFavorite('${item.id}', '${item.name.replace(/'/g, "\\'")}'); openDetailModal('landmark', '${item.id}');"
+                  class="px-4 py-2 rounded-xl ${fav ? "bg-rose-500 text-white" : "bg-white text-slate-700 border border-slate-300"} text-xs font-bold transition flex items-center gap-1.5"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                  <span>${fav ? "Đã lưu" : "Lưu"}</span>
+                </button>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <h4 class="font-serif font-bold text-lg text-ocean">Giới thiệu &amp; Trải nghiệm danh thắng</h4>
+              ${item.story.split("\n\n").map((p) => `<p class="text-slate-700 text-sm sm:text-base leading-relaxed">${p}</p>`).join("")}
+            </div>
+            <div class="p-5 rounded-2xl bg-amber-50 border border-amber-200">
+              <h4 class="font-bold text-sm text-amber-950 mb-1"><i class="fa-solid fa-lightbulb text-sunset mr-1.5"></i>Gợi ý lịch trình thực tế tại Đà Nẵng:</h4>
+              <p class="text-slate-700 text-sm leading-relaxed">${item.tips}</p>
+            </div>
+          </div>
+        `;
+      } else if (type === "food") {
+        const item = FOODS_DATA.find((x) => x.id === id);
+        if (!item) return;
+        const fav = isFavorite(item.id);
+        const imgSrc = getFoodImageSrc(item);
+        body.innerHTML = `
+          <div class="food-img-frame relative h-72 sm:h-96 bg-slate-900">
+            <img src="${imgSrc}" alt="${item.name}" onerror="this.onerror=null;this.src='${item.backupUrl}';" class="w-full h-full object-cover ${getChefFilterClass()}" />
+            <div class="absolute bottom-6 left-6 right-6 z-10 text-white">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-sunset text-white">#${item.order} • ${item.taste}</span>
+              <h3 class="mt-2 text-2xl sm:text-4xl font-serif font-bold">${item.name}</h3>
+              <p class="text-xs sm:text-sm text-amber-200 mt-1"><i class="fa-solid fa-star mr-1"></i>${item.tag}</p>
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 space-y-5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-sunset-deep bg-amber-100 px-3 py-1.5 rounded-full">
+                Tinh hoa ẩm thực Đà Nẵng • Chuẩn vị truyền thống
+              </span>
+              <button
+                type="button"
+                onclick="toggleFavorite('${item.id}', '${item.name.replace(/'/g, "\\'")}'); openDetailModal('food', '${item.id}');"
+                class="px-4 py-2 rounded-xl ${fav ? "bg-rose-500 text-white" : "bg-slate-100 text-slate-700"} text-xs font-bold transition flex items-center gap-1.5"
+              >
+                <i class="fa-solid fa-heart"></i>
+                <span>${fav ? "Đã lưu món yêu thích" : "Thả tim lưu món này"}</span>
+              </button>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-lg text-ocean mb-2">Câu chuyện &amp; Hương vị đặc sản</h4>
+              <p class="text-slate-700 text-sm sm:text-base leading-relaxed">${item.story}</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-nostalgia-warm border border-amber-300/80">
+              <p class="text-slate-800 text-sm sm:text-base leading-relaxed font-medium">${item.chefNote}</p>
+            </div>
+          </div>
+        `;
+      } else if (type === "blog") {
+        const post = BLOG_POSTS.find((x) => x.id === id);
+        if (!post) return;
+        body.innerHTML = `
+          <div class="relative h-64 sm:h-72 bg-amber-950">
+            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover opacity-85" />
+            <div class="absolute inset-0 bg-gradient-to-t from-amber-950 via-amber-950/40 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-sunset text-white">${post.date}</span>
+              <h3 class="mt-2 text-2xl sm:text-3xl font-serif font-bold leading-snug">${post.title}</h3>
+            </div>
+          </div>
+          <div class="p-6 sm:p-9 space-y-4 bg-[#FAF8F5]">
+            ${post.fullText.map((p) => `<p class="text-slate-700 text-base leading-relaxed">${p}</p>`).join("")}
+            <div class="mt-6 p-6 rounded-2xl bg-gradient-to-r from-amber-100 to-orange-50 border border-amber-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <h4 class="font-serif font-bold text-amber-950 text-lg">Những Điều Ở Lại ♡</h4>
+                <p class="text-xs sm:text-sm text-amber-900 italic">“Có những yêu thương, năm tháng chẳng thể mang đi.”</p>
+              </div>
+              <a
+                href="${SITE_CONFIG.fanpageUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-3 rounded-xl bg-[#1877F2] hover:bg-[#0d65d9] text-white text-xs sm:text-sm font-bold shadow transition flex items-center gap-2 shrink-0"
+              >
+                <i class="fa-brands fa-facebook"></i>
+                <span>Vào Fanpage Những điều Ở lại</span>
+              </a>
+            </div>
+          </div>
+        `;
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeDetailModal() {
+      const modal = document.getElementById("detail-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    /**
+     * SỔ TAY YÊU THÍCH MODAL
+     */
+    function openFavoritesModal() {
+      const modal = document.getElementById("favorites-modal");
+      const listEl = document.getElementById("favorites-modal-list");
+      if (!modal || !listEl) return;
+
+      const favIds = getFavorites();
+      const allItems = [
+        ...LANDMARKS_DATA.map((x) => ({ ...x, itemType: "landmark", typeLabel: "Danh thắng", previewImg: x.image })),
+        ...FOODS_DATA.map((x) => ({ ...x, itemType: "food", typeLabel: "Đặc sản", previewImg: getFoodImageSrc(x) }))
+      ];
+      const savedItems = allItems.filter((item) => favIds.includes(item.id));
+
+      if (savedItems.length === 0) {
+        listEl.innerHTML = `
+          <div class="py-12 text-center text-slate-500">
+            <i class="fa-regular fa-heart text-4xl text-slate-300 mb-3"></i>
+            <p class="font-semibold text-slate-700">Bạn chưa lưu danh thắng hay món ngon nào.</p>
+            <p class="text-xs mt-1">Hãy nhấn vào biểu tượng trái tim ♡ trên mỗi danh thắng hoặc món ăn Đà Nẵng để lưu vào sổ tay nhé!</p>
+          </div>
+        `;
+      } else {
+        listEl.innerHTML = savedItems.map((item) => `
+          <div class="flex items-center justify-between gap-4 p-3.5 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white transition">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <img src="${item.previewImg}" alt="${item.name}" class="w-16 h-16 rounded-xl object-cover shrink-0" />
+              <div class="min-w-0">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-ocean">${item.typeLabel}</span>
+                <h4 class="font-serif font-bold text-slate-900 text-sm sm:text-base truncate">${item.name}</h4>
+                <p class="text-xs text-slate-500 truncate">${item.shortDesc}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button
+                type="button"
+                onclick="closeFavoritesModal(); openDetailModal('${item.itemType}', '${item.id}');"
+                class="px-3 py-2 rounded-xl bg-ocean/10 text-ocean hover:bg-ocean hover:text-white text-xs font-semibold transition"
+              >
+                Xem
+              </button>
+              <button
+                type="button"
+                onclick="toggleFavorite('${item.id}', '${item.name.replace(/'/g, "\\'")}'); openFavoritesModal();"
+                class="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 hover:bg-rose-500 hover:text-white flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-trash-can text-xs"></i>
+              </button>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeFavoritesModal() {
+      const modal = document.getElementById("favorites-modal");
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function clearAllFavorites() {
+      saveFavorites([]);
+      renderLandmarks();
+      renderFoods();
+      openFavoritesModal();
+      showToast("Đã xóa toàn bộ danh sách yêu thích", "info");
+    }
+
+    function copyFanpageUrl() {
+      const textArea = document.createElement("textarea");
+      textArea.value = SITE_CONFIG.fanpageUrl;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand("copy");
+        showToast("Đã sao chép địa chỉ Fanpage 'Những điều Ở lại' vào bộ nhớ tạm!", "success");
+      } catch (err) {
+        showToast("Đường dẫn: " + SITE_CONFIG.fanpageUrl, "info");
+      }
+      document.body.removeChild(textArea);
+    }
+
+    /**
+     * KHỞI CHẠY KHI TẢI TRANG
+     */
+    window.addEventListener("DOMContentLoaded", () => {
+      initComparisonSlider();
+      renderEraPanel("xua");
+      renderMilestones();
+      renderLandmarks();
+      renderFoods();
+      renderPeopleStories();
+      renderBlogPosts();
+      updateFavoriteBadge();
+
+      // Chuyển Tab Xưa & Nay
+      document.querySelectorAll(".era-tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".era-tab-btn").forEach((b) => {
+            b.className = "era-tab-btn flex-1 py-2.5 px-4 rounded-xl text-sm font-semibold transition text-slate-600 hover:text-ocean";
+          });
+          btn.className = "era-tab-btn flex-1 py-2.5 px-4 rounded-xl text-sm font-semibold transition bg-white text-ocean shadow-sm";
+          renderEraPanel(btn.dataset.era);
+        });
+      });
+
+      // Lọc & tìm kiếm 12 Danh thắng
+      document.querySelectorAll(".landmark-filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          activeLandmarkCategory = btn.dataset.category;
+          updateLandmarkFilterButtons();
+          renderLandmarks();
+        });
+      });
+
+      const landmarkSearchInput = document.getElementById("landmark-search");
+      const clearLandmarkBtn = document.getElementById("clear-landmark-search");
+      if (landmarkSearchInput) {
+        landmarkSearchInput.addEventListener("input", (e) => {
+          landmarkSearchQuery = e.target.value;
+          if (clearLandmarkBtn) clearLandmarkBtn.classList.toggle("hidden", !landmarkSearchQuery);
+          renderLandmarks();
+        });
+      }
+      if (clearLandmarkBtn) {
+        clearLandmarkBtn.addEventListener("click", () => {
+          landmarkSearchQuery = "";
+          if (landmarkSearchInput) landmarkSearchInput.value = "";
+          clearLandmarkBtn.classList.add("hidden");
+          renderLandmarks();
+        });
+      }
+
+      // Lọc & tìm kiếm 14 Đặc sản
+      document.querySelectorAll(".food-filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          activeFoodTaste = btn.dataset.taste;
+          updateFoodFilterButtons();
+          renderFoods();
+        });
+      });
+
+      const foodSearchInput = document.getElementById("food-search");
+      if (foodSearchInput) {
+        foodSearchInput.addEventListener("input", (e) => {
+          foodSearchQuery = e.target.value;
+          renderFoods();
+        });
+      }
+
+      // Menu di động
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuIcon = document.getElementById("mobile-menu-icon");
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.toggle("hidden");
+          if (mobileMenuIcon) {
+            mobileMenuIcon.className = isHidden ? "fa-solid fa-bars text-xl" : "fa-solid fa-xmark text-xl";
+          }
+        });
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            if (mobileMenuIcon) mobileMenuIcon.className = "fa-solid fa-bars text-xl";
+          });
+        });
+      }
+
+      // Đóng modal khi click ra nền hoặc nhấn phím ESC
+      ["detail-modal", "map-modal", "photo-studio-modal", "favorites-modal"].forEach((modalId) => {
+        const el = document.getElementById(modalId);
+        if (el) {
+          el.addEventListener("click", (e) => {
+            if (e.target === el) {
+              if (modalId === "detail-modal") closeDetailModal();
+              if (modalId === "map-modal") closeMapModal();
+              if (modalId === "photo-studio-modal") closePhotoStudioModal();
+              if (modalId === "favorites-modal") closeFavoritesModal();
+            }
+          });
+        }
+      });
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeDetailModal();
+          closeMapModal();
+          closePhotoStudioModal();
+          closeFavoritesModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
